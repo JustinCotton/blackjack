@@ -9,7 +9,7 @@
 
   * Languages: HTML5, CSS3, Javascript, jQuery
   * Design: Google Fonts
-  * Project Planning & User Stories: [Trello]()
+  * Project Planning & User Stories: [Trello](https://trello.com/b/51TjK5Yf/sei21)
   * Visual Studio Code
   * Git, Github, Github Pages
 
@@ -22,9 +22,11 @@
   * Modeled on real-world Blackjack rules and gameflow
 
 
-## Wireframe
+## Wireframe / Whiteboarding
 
-![Wireframe]()
+![Wireframe](https://github.com/JustinCotton/blackjack/blob/master/BlackjackWireframe.png)
+
+![Whiteboarding](https://github.com/JustinCotton/blackjack/blob/master/BlackjackWhiteboard.png)
 
 ## Winning Combination
 
@@ -36,5 +38,4 @@
   * Add betting chips to UI instead of inputting dollar amounts
   * Make application responsive
   * Add multiplayer functionality
-  * Add A.I. for player(s) vs. computer
   
