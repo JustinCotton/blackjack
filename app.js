@@ -39,3 +39,7 @@
 // OR:
 //
 // 3) Dealer's hand outranks Player's hand (Player loses their initial bet, and any insurance bet)
+//
+// Tying/"Pushing" Conditions
+//
+// 1) Player and Dealer have equal, un-busting hands (Player's bet is returned)

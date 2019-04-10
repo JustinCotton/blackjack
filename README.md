@@ -28,13 +28,18 @@
 
 ![Whiteboarding](https://github.com/JustinCotton/blackjack/blob/master/BlackjackWhiteboard.png)
 
-## Winning Combination
+## Winning Conditions
 
-![Winning Combination]
+   * Player is dealt a "natural" blackjack, AND
+   Dealer is not dealt a natural blackjack (Player's bet is paid out at 3:2), OR
+
+   * Player doesn't bust (go over 21), AND Player's hand outranks Dealer's hand (Player's bet is paid out at 2:1), OR
+   
+   * Dealer busts (Player's bet is paid out at 2:1)
 
 ## Future Development
 
-  * Add Split, Double Down, and Insurance functionality
+  * Add Split, Double Down, Surrender, and Insurance functionality
   * Add betting chips to UI instead of inputting dollar amounts
   * Make application responsive
   * Add multiplayer functionality
