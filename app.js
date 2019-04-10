@@ -9,7 +9,7 @@
 //   a) deal 1st card, face-up, to Player
 //   b) deal 1st card, face-up, to Dealer
 //   c) deal 2nd card, face-up, to Player
-//   d) deal 2nd card, face-down, to Player
+//   d) deal 2nd card, face-down, to Dealer
 //      i) each hand represented by card values in an array, which will be added later to calculate hand values
 //     ii) card values:
 //          A) number cards: pip value (2, 3, 4, 5, 6, 7, 8, or 9)
@@ -27,7 +27,8 @@
 //     iv) if Player does have blackjack, Player's bet is returned ("push") (Push, Game Over)
 //      v) any insurance bet is paid out to Player at 2:1 (Game Over)
 //   b) if Dealer does not have blackjack:
-//      i) Player loses any insurance bet (move to Player's turn [call function])
+//      i) if Player has a "natural" blackjack (hand value = 21 after deal), Player wins (Blackjack, Game Over)
+//     ii) Player loses any insurance bet (move to Player's turn [call function])
 
 // 5. Player's turn [event listeners and functions]
 //   a) Stand
