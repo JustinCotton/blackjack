@@ -14,7 +14,26 @@
 //   a) if Dealer's face-up card value is 10 or an Ace, then enable Insurance button, which when clicked adds an additional bet equal to half of Player's original bet (which will pay 2-to-1 if Dealer has blackjack)
 
 // 4. Dealer checks hand for blackjack
-//   a) if Dealer has blackjack, reveal face-down card
+//   a) if Dealer has blackjack:
+//      i) reveal face-down card
+//     ii) if Player does not have blackjack, Player loses bet (Game Over)
+//     iv) if Player does have blackjack, Player's bet is returned ("push") (Game Over)
+//      v) any insurance bet is paid out to Player at 2:1 (Game Over)
+//   b) if Dealer does not have blackjack:
+//      i) Player loses any insurance bet
+
+// 5. Player's turn
+//   a) Stand
+//      i) Player receives no additional cards, and it is Dealer's turn
+//   b) Hit
+//      i) Player receives an additional card
+//         A) if Player busts, Player loses (Player loses bet) (Game Over)
+//         B) if Player doesn't bust, Player has option to Stand or Hit again (loop to Step 5)
+//   c) Split (future feature where hand is split into two hands if initial dealt cards are the same number value, or same face value, and Player bets an amount equal to the initial bet for the new hand; each hand is dealt an additional face-up card, and played separately starting at Step 5)
+//   d) Double Down
+//      i) Player bets an amount equal to initial bet that Player will win the hand with the next drawn card
+//   e) Surrender
+//      i) Player withdraws (Half of Player's bet is returned)
 
 // Winning conditions:
 // 1) 

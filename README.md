@@ -37,6 +37,18 @@
    
    * Dealer busts (Player's bet is paid out at 1:1)
 
+## Losing Conditions
+
+   * Dealer is dealt a "natural" blackjack, and Player is not dealt a natural blackjack (Player loses their bet, OR
+   
+   * Player busts (Player loses their bet, OR  
+   
+   * Dealer's hand outranks Player's hand (Player loses their bet)
+
+## Tying/"Pushing" Conditions
+
+   * Player and Dealer have equal, un-busting hands (Player's bet is returned)
+
 ## Future Development
 
   * Add Split, Double Down, Surrender, and Insurance functionality
