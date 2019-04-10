@@ -33,9 +33,9 @@
    * Player is dealt a "natural" blackjack, AND
    Dealer is not dealt a natural blackjack (Player's bet is paid out at 3:2), OR
 
-   * Player doesn't bust (go over 21), AND Player's hand outranks Dealer's hand (Player's bet is paid out at 2:1), OR
+   * Player doesn't bust (hand value exceeding 21), AND Player's hand outranks Dealer's hand (Player's bet is paid out at 1:1), OR
    
-   * Dealer busts (Player's bet is paid out at 2:1)
+   * Dealer busts (Player's bet is paid out at 1:1)
 
 ## Future Development
 
