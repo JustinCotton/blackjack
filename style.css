@@ -14,4 +14,6 @@ button {
     border: 6px solid white;
     border-radius: 5px;
     margin: 20px;
+    height: 50px;
+    width: 40px;
 }
