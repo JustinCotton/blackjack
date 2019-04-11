@@ -25,6 +25,22 @@ button {
     display: inline-block;
 }
 
+.score {    
+    background-color: red;
+    border-radius: 15px;
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+}
+
+.balance {    
+    background-color: red;
+    border-radius: 15px;
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+}
+
 /* font-family: 'Fascinate Inline', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Lobster', cursive;
