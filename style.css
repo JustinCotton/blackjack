@@ -26,6 +26,10 @@ aside {
     display: inline-block;
 }
 
+footer {
+    display: block;
+}
+
 .cardSpot {
     border: 6px solid white;
     border-radius: 10px;
