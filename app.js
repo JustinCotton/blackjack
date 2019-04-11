@@ -88,3 +88,46 @@
 // Tying/"Pushing" Conditions
 //
 // 1) Player and Dealer have equal, un-busting hands (Player's bet is returned)
+
+const getBetAmountFromPlayer = () => {
+    return $("#bet").val();
+};
+
+
+$(function() {
+    // Listen for click events on "Deal" button
+    $("#deal").click(function (event) {
+        dealCards(getBetAmountFromPlayer());
+    });
+
+    // Listen for click events on "Hit" button
+    $("#hit").click(function (event) {
+        hitPlayer(getHandValue());
+    });
+
+    // Listen for click events on "Stand" button
+    $("#stand").click(function (event) {
+        dealerTurn();
+    });
+
+    // Listen for click events on "Double Down" button
+    $("#doubleDown").click(function (event) {
+        doubleDown(getBetAmountFromPlayer); // double down will call hit() and immediately call dealerTurn()
+    });
+
+    // Listen for click events on "Split" button
+    $("#split").click(function (event) {
+        split(playerHand); // where playerHand is an array of player's cards; likely no time for this feature
+    });
+
+    // Listen for click events on "Insurance" button
+    $("#insurance").click(function (event) {
+        insurance(getBetAmountFromPlayer); // will save new bet amount equal to half of current bet in new variable
+    });
+
+    // Listen for click events on "Surrender" button
+    $("#surrender").click(function (event) {
+        surrender(getBetAmountFromPlayer); // will return half of currentBet to player, then Game Over
+    });
+
+});
