@@ -173,6 +173,7 @@ const shuffle = () => {
 }
 
 const dealCards = () => {
+    $("#deal").hide();
     $("#hit").show();
     $("#stand").show();
     $("#doubleDown").show();
