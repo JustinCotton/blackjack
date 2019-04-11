@@ -57,6 +57,20 @@ footer {
     width: 150px;
 }
 
+.input {
+    width: 80%;
+    height: 10%;
+}
+
+/* .faceDown {
+    background: url(./);
+} */
+
+.deck {
+    height: 150px;
+    width: 100px;
+}
+
 .right {
     float: right;
 }
