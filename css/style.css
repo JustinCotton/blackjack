@@ -69,7 +69,7 @@ footer {
 } */
 
 .deck {
-    background: url("./img/deck1.jpg");
+    background: url("../img/deck1.jpg");
     border-radius: 15px;
     margin: 20px auto;
     height: 150px;
