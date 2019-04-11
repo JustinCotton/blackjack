@@ -159,7 +159,7 @@ const getBetAmountFromPlayer = () => {
         // $('.footer').show(0).delay(3000).hide(0);
     } else {
         playerBalance = playerBalance - currentBet;
-        $("#cash").text = "$" + playerBalance;
+        $("#cash").text("$" + playerBalance);
         console.log($("#cash").text);
         console.log(currentBet);
         return currentBet;
