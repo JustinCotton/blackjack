@@ -16,6 +16,10 @@ button {
     width: 220px;
 }
 
+aside {
+    float: right;
+}
+
 .cardSpot {
     border: 6px solid white;
     border-radius: 10px;
