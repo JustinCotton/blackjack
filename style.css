@@ -1,6 +1,7 @@
 body {
     background: green;
     color: white;
+    margin: 0 auto;
 }
 
 button {
@@ -15,7 +16,7 @@ button {
     border: 6px solid white;
     border-radius: 5px;
     margin: 20px;
-    height: 100px;
-    width: 60px;
+    height: 150px;
+    width: 80px;
     display: inline-block;
 }
