@@ -173,8 +173,9 @@ const shuffle = () => {
 }
 
 const dealCards = () => {
-    $("#split").hide();
-    $("#insurance").hide();
+    $("#hit").show();
+    $("#stand").show();
+    $("#doubleDown").show();
     // shuffle deck of 52 cards (no Jokers)
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();

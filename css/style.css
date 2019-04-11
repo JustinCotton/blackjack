@@ -84,7 +84,7 @@ footer {
     float: left;
 }
 
-#split, #insurance {
+#hit, #stand, #doubleDown, #split, #insurance, #surrender {
     display: none;
 }
 
