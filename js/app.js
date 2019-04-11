@@ -224,8 +224,6 @@ const surrender = () => {
 // instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
 
 $(function() {
-    $("#split").hide();
-    $("#insurance").hide();
     // Listen for click events on "Deal" button
     $("#deal").click(function (event) {
         event.preventDefault();

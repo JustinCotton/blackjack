@@ -82,7 +82,10 @@ footer {
 
 .left {
     float: left;
+}
 
+#split, #insurance {
+    display: none;
 }
 
 /* font-family: 'Fascinate Inline', cursive;
