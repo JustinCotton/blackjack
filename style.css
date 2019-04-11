@@ -9,3 +9,9 @@ button {
     color: white;
     background-color: red;
 }
+
+.cardSpot {
+    border: 6px solid white;
+    border-radius: 5px;
+    margin: 20px;
+}
