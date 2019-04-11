@@ -137,36 +137,43 @@ const surrender = () => {
 $(function() {
     // Listen for click events on "Deal" button
     $("#deal").click(function (event) {
+        event.preventDefault();
         dealCards(getBetAmountFromPlayer());
     });
 
     // Listen for click events on "Hit" button
     $("#hit").click(function (event) {
+        event.preventDefault();
         hitPlayer(getHandValue());
     });
 
     // Listen for click events on "Stand" button
     $("#stand").click(function (event) {
+        event.preventDefault();
         dealerTurn();
     });
 
     // Listen for click events on "Double Down" button
     $("#doubleDown").click(function (event) {
+        event.preventDefault();
         doubleDown(getBetAmountFromPlayer); // double down will call hit() and immediately call dealerTurn()
     });
 
     // Listen for click events on "Split" button
     $("#split").click(function (event) {
+        event.preventDefault();
         split(playerHand); // where playerHand is an array of player's cards; likely no time for this feature
     });
 
     // Listen for click events on "Insurance" button
     $("#insurance").click(function (event) {
+        event.preventDefault();
         insurance(getBetAmountFromPlayer); // will save new bet amount equal to half of current bet in new variable
     });
 
     // Listen for click events on "Surrender" button
     $("#surrender").click(function (event) {
+        event.preventDefault();
         surrender(getBetAmountFromPlayer); // will return half of currentBet to player, then Game Over
     });
 
