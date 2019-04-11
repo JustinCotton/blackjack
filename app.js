@@ -1,4 +1,5 @@
 // 1. Press "Play" button to shuffle (randomize) 52 cards
+// deck of cards could be an array of objects, which each card being an object with keys related to suit, value, and image, and a card would be selected to be dealt by selecting a random number, that would represent the index of an object (card) in the array (deck)
 
 // 2. Player makes a wager (by input field or pressing buttons representing pre-determined values) [event listeners]
 //   a) check whether value of wager exceeds Player's available money

@@ -2,3 +2,10 @@ body {
     background: green;
     color: white;
 }
+
+button {
+    padding: 5px;
+    border: white;
+    color: white;
+    background-color: red;
+}
