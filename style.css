@@ -19,12 +19,12 @@ button {
 main {
     float: left;
     display: inline-block;
-    width: 50%;
+    width: 60%;
 }
 
 aside {
     display: inline-block;
-    margin: 10px;
+    /* margin: 10px; */
     width: 20%;
 }
 
