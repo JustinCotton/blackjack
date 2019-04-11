@@ -8,6 +8,7 @@ button {
     border: white;
     color: white;
     background-color: red;
+    font-size: 10px;
 }
 
 .cardSpot {
