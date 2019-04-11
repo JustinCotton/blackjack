@@ -2,6 +2,7 @@ body {
     background: green;
     color: white;
     margin: 0 auto;
+    text-align: center;
 }
 
 button {
@@ -10,11 +11,13 @@ button {
     color: white;
     background-color: red;
     font-size: 10px;
+    width: 50px;
+    height: 30px;
 }
 
 .cardSpot {
     border: 6px solid white;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 20px;
     height: 150px;
     width: 100px;
