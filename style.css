@@ -20,13 +20,12 @@ main {
     float: left;
     display: inline-block;
     /* width: 80%; */
-    padding: 0 0 0 30%;
+    /* padding: 0 0 0 30%; */
 }
 
 aside {
     float: right;
     display: inline-block;
-    /* width: 10%; */
 }
 
 footer {
@@ -57,6 +56,14 @@ footer {
     margin: 20px;
     height: 150px;
     width: 150px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
 }
 
 /* font-family: 'Fascinate Inline', cursive;
