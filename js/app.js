@@ -168,14 +168,14 @@ const dealCards = () => {
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();
         thisCard = "#playerCard" + i
-        $(thisCard).background(playerHand[i].face);
+        $(thisCard).css("background", playerHand[i].face);
     }
     for (let i = 0; i < 2; i++) {
         dealerHand[i] = randomCard();
         thisCard = "#dealerCard" + i
-        $(thisCard).background(dealerHand[i].face);
+        $(thisCard).css("background", dealerHand[i].face);
     }
-    $(dealerCard0).background(cardBack);
+    $(dealerCard0).css("background", cardBack);
 };
 
 const playerTurn = () => {
