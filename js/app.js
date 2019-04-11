@@ -90,7 +90,7 @@
 // 1) Player and Dealer have equal, un-busting hands (Player's bet is returned)
 
 let bet = 0;
-let playersBalance = 1000;
+let playerBalance = 1000;
 let dealerScore = 0;
 let playerScore = 0;
 let insuranceBet = 0;
@@ -153,8 +153,16 @@ let deckOfCards = [
 ]
 
 const getBetAmountFromPlayer = () => {
-    console.log($("#bet").val())
-    return $("#bet").val();
+    currentBet = parseInt($("#bet").val())
+    if (currentBet > playerBalance) {
+        alert("Insufficient Funds!");
+        // $('.footer').show(0).delay(3000).hide(0);
+    } else {
+        playerBalance = playerBalance - currentBet;
+        $("#cash").text = "$" + playerBalance;
+        console.log(currentBet)
+        return currentBet;
+    }
 };
 
 const shuffle = () => {
