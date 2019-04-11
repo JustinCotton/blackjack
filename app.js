@@ -93,6 +93,39 @@ const getBetAmountFromPlayer = () => {
     return $("#bet").val();
 };
 
+const dealCards = () => {
+    return 
+};
+
+const playerTurn = () => {
+    return 
+};
+
+const dealerTurn = () => {
+    return 
+};
+
+const hitPlayer = () => {
+    return 
+};
+
+const doubleDown = () => {
+    return 
+};
+
+const split = () => {
+    return 
+};
+
+const insurance = () => {
+    return 
+};
+
+const surrender = () => {
+    return 
+};
+
+// instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
 
 $(function() {
     // Listen for click events on "Deal" button
