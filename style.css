@@ -24,7 +24,6 @@ main {
 }
 
 aside {
-    float: right;
     display: inline-block;
 }
 
