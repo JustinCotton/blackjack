@@ -67,6 +67,8 @@ footer {
 } */
 
 .deck {
+    background-color: red;
+    border-radius: 15px;
     height: 150px;
     width: 100px;
 }
