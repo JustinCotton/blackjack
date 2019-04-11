@@ -28,6 +28,7 @@ aside {
 
 footer {
     display: block;
+    clear: both;
 }
 
 .cardSpot {
