@@ -89,15 +89,93 @@
 //
 // 1) Player and Dealer have equal, un-busting hands (Player's bet is returned)
 
+let bet = 0;
+let playersBalance = 1000;
+let dealerScore = 0;
+let playerScore = 0;
+let insuranceBet = 0;
+let dealerHand = [];
+let playerHand = [];
+let deckOfCards = [
+    {name: "2 of Hearts", value: 2, face: "./2Hearts.jpg"},
+    {name: "3 of Hearts", value: 3, face: "./3Hearts.jpg"},
+    {name: "4 of Hearts", value: 4, face: "./4Hearts.jpg"},
+    {name: "5 of Hearts", value: 5, face: "./5Hearts.jpg"},
+    {name: "6 of Hearts", value: 6, face: "./6Hearts.jpg"},
+    {name: "7 of Hearts", value: 7, face: "./7Hearts.jpg"},
+    {name: "8 of Hearts", value: 8, face: "./8Hearts.jpg"},
+    {name: "9 of Hearts", value: 9, face: "./9Hearts.jpg"},
+    {name: "10 of Hearts", value: 10, face: "./10Hearts.jpg"},
+    {name: "Jack of Hearts", value: 10, face: "./jackHearts.jpg"},
+    {name: "Queen of Hearts", value: 10, face: "./queenHearts.jpg"},
+    {name: "King of Hearts", value: 10, face: "./kingHearts.jpg"},
+    {name: "Ace of Hearts", value: 11, face: "./aceHearts.jpg"},
+    {name: "2 of Spades", value: 2, face: "./2Spades.jpg"},
+    {name: "3 of Spades", value: 3, face: "./3Spades.jpg"},
+    {name: "4 of Spades", value: 4, face: "./4Spades.jpg"},
+    {name: "5 of Spades", value: 5, face: "./5Spades.jpg"},
+    {name: "6 of Spades", value: 6, face: "./6Spades.jpg"},
+    {name: "7 of Spades", value: 7, face: "./7Spades.jpg"},
+    {name: "8 of Spades", value: 8, face: "./8Spades.jpg"},
+    {name: "9 of Spades", value: 9, face: "./9Spades.jpg"},
+    {name: "10 of Spades", value: 10, face: "./10Spades.jpg"},
+    {name: "Jack of Spades", value: 10, face: "./jackSpades.jpg"},
+    {name: "Queen of Spades", value: 10, face: "./queenSpades.jpg"},
+    {name: "King of Spades", value: 10, face: "./kingSpades.jpg"},
+    {name: "Ace of Spades", value: 11, face: "./aceSpades.jpg"},
+    {name: "2 of Diamonds", value: 2, face: "./2Diamonds.jpg"},
+    {name: "3 of Diamonds", value: 3, face: "./3Diamonds.jpg"},
+    {name: "4 of Diamonds", value: 4, face: "./4Diamonds.jpg"},
+    {name: "5 of Diamonds", value: 5, face: "./5Diamonds.jpg"},
+    {name: "6 of Diamonds", value: 6, face: "./6Diamonds.jpg"},
+    {name: "7 of Diamonds", value: 7, face: "./7Diamonds.jpg"},
+    {name: "8 of Diamonds", value: 8, face: "./8Diamonds.jpg"},
+    {name: "9 of Diamonds", value: 9, face: "./9Diamonds.jpg"},
+    {name: "10 of Diamonds", value: 10, face: "./10Diamonds.jpg"},
+    {name: "Jack of Diamonds", value: 10, face: "./jackDiamonds.jpg"},
+    {name: "Queen of Diamonds", value: 10, face: "./queenDiamonds.jpg"},
+    {name: "King of Diamonds", value: 10, face: "./kingDiamonds.jpg"},
+    {name: "Ace of Diamonds", value: 11, face: "./aceDiamonds.jpg"},
+    {name: "2 of Clubs", value: 2, face: "./2Clubs.jpg"},
+    {name: "3 of Clubs", value: 3, face: "./3Clubs.jpg"},
+    {name: "4 of Clubs", value: 4, face: "./4Clubs.jpg"},
+    {name: "5 of Clubs", value: 5, face: "./5Clubs.jpg"},
+    {name: "6 of Clubs", value: 6, face: "./6Clubs.jpg"},
+    {name: "7 of Clubs", value: 7, face: "./7Clubs.jpg"},
+    {name: "8 of Clubs", value: 8, face: "./8Clubs.jpg"},
+    {name: "9 of Clubs", value: 9, face: "./9Clubs.jpg"},
+    {name: "10 of Clubs", value: 10, face: "./10Clubs.jpg"},
+    {name: "Jack of Clubs", value: 10, face: "./jackClubs.jpg"},
+    {name: "Queen of Clubs", value: 10, face: "./queenClubs.jpg"},
+    {name: "King of Clubs", value: 10, face: "./kingClubs.jpg"},
+    {name: "Ace of Clubs", value: 11, face: "./aceClubs.jpg"},
+]
+
 const getBetAmountFromPlayer = () => {
     console.log($("#bet").val())
     return $("#bet").val();
 };
 
+const shuffle = () => {
+    randomCard = deckOfCard[Math.floor(Math.random() * 10)];
+    return randomCard;
+}
+
 const dealCards = () => {
     $("split").hide();
     $("insurance").hide();
-    
+    // shuffle deck of 52 cards (no Jokers)
+    for (let i = 0; i < 2; i++) {
+        playerHand[i] = shuffle();
+        thisCard = "#playerCard" + i
+        $(thisCard).background(playerHand[i].face);
+    }
+    for (let i = 0; i < 2; i++) {
+        dealerHand[i] = randomCard();
+        thisCard = "#dealerCard" + i
+        $(thisCard).background(dealerHand[i].face);
+    }
+    $(dealerCard0).background(cardBack);
 };
 
 const playerTurn = () => {
