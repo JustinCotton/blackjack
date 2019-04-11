@@ -13,6 +13,7 @@ button {
     background-color: red;
     font-size: 30px;
     margin: 8px;
+    width: 150px;
 }
 
 .cardSpot {
