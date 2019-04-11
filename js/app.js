@@ -167,7 +167,7 @@ const getBetAmountFromPlayer = () => {
 };
 
 const shuffle = () => {
-    randomCard = deckOfCards[Math.floor(Math.random() * 10)];
+    randomCard = deckOfCards[Math.floor(Math.random() * 51)];
     console.log(randomCard);
     return randomCard;
 }
