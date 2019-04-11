@@ -90,11 +90,14 @@
 // 1) Player and Dealer have equal, un-busting hands (Player's bet is returned)
 
 const getBetAmountFromPlayer = () => {
+    console.log($("#bet").val())
     return $("#bet").val();
 };
 
 const dealCards = () => {
-    return 
+    $("split").hide();
+    $("insurance").hide();
+    
 };
 
 const playerTurn = () => {
@@ -106,18 +109,22 @@ const dealerTurn = () => {
 };
 
 const hitPlayer = () => {
+    $("insurance").hide();
     return 
 };
 
-const doubleDown = () => {
+const doubleDown = (initialBet) => {
+    $("insurance").hide();
     return 
 };
 
 const split = () => {
+    $("insurance").hide();
     return 
 };
 
 const insurance = () => {
+    $("insurance").hide();
     return 
 };
 
