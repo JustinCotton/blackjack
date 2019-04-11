@@ -16,8 +16,14 @@ button {
     width: 220px;
 }
 
+main {
+    float: left;
+    display: inline-block;
+}
+
 aside {
     float: right;
+    display: inline-block;
 }
 
 .cardSpot {
