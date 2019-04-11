@@ -20,19 +20,13 @@ main {
     float: left;
     display: inline-block;
     width: 80%;
+    padding: 10% 10% 10% 20%;
 }
 
 aside {
+    float: right;
     display: inline-block;
     width: 10%;
-}
-
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
 }
 
 footer {
