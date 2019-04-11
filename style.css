@@ -19,13 +19,13 @@ button {
 main {
     float: left;
     display: inline-block;
-    width: 70%;
+    width: 60%;
 }
 
 aside {
     display: inline-block;
     margin: 10px;
-    width: 10%;
+    width: 20%;
 }
 
 footer {
