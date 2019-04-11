@@ -96,6 +96,7 @@ let playerScore = 0;
 let insuranceBet = 0;
 let dealerHand = [];
 let playerHand = [];
+let cardBack = "./img/deck1.jpg"
 let deckOfCards = [
     {name: "2 of Hearts", value: 2, face: "./2Hearts.jpg"},
     {name: "3 of Hearts", value: 3, face: "./3Hearts.jpg"},
