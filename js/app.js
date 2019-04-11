@@ -171,7 +171,7 @@ const dealCards = () => {
         $(thisCard).css("background", playerHand[i].face);
     }
     for (let i = 0; i < 2; i++) {
-        dealerHand[i] = randomCard();
+        dealerHand[i] = shuffle();
         thisCard = "#dealerCard" + i
         $(thisCard).css("background", dealerHand[i].face);
     }
