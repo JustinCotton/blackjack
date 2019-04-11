@@ -69,7 +69,8 @@ footer {
 } */
 
 .deck {
-    background: cover url("../img/deck1.jpg");
+    background: url("../img/deck1.jpg");
+    background-size: cover;
     border-radius: 15px;
     margin: 20px auto;
     height: 150px;
