@@ -198,7 +198,7 @@ const dealCards = () => {
         let cardFace = "url(" + dealerHand[j].face + ")";
         $(thisCard).css({"background": cardFace, "background-size": "contain"});
     }
-    $("dealerCard0").css("background", cardBack);
+    $("dealerCard0").css({"background": cardBack, "background-size": "contain"});
 };
 
 const playerTurn = () => {
