@@ -28,6 +28,14 @@ aside {
     width: 20%;
 }
 
+aside h3 {
+    margin-top: 10%;
+}
+
+aside p {
+    font-size: 30px;
+}
+
 footer {
     display: block;
     clear: both;
