@@ -43,11 +43,23 @@ footer {
 }
 
 .deck {
-    background: center cover;
+    background-size: cover;
     border-radius: 15px;
     margin: 20px auto;
     height: 150px;
     width: 100px;
+}
+
+.deck1 {
+    background: center url("../deck1.jpg");
+}
+
+.deck2 {
+    background: center url("../deck2.jpg");
+}
+
+.deck3 {
+    background: center url("../deck3.jpg");
 }
 
 .score {    
