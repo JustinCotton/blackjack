@@ -29,7 +29,7 @@ button {
 }
 
 main {
-    float: left;
+    /* float: left; */
     display: inline-block;
     width: 60%;
 }
