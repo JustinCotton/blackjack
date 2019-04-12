@@ -64,7 +64,7 @@ footer {
 }
 
 .cardSpot {
-    border: 6px solid white;
+    /* border: 6px solid white; */
     background: center url("../KingSpades.png");
     background-size: cover;
     border-radius: 10px;
