@@ -65,7 +65,7 @@ footer {
 
 .cardSpot {
     /* border: 6px solid white; */
-    background: url("../KingSpades.png");
+    background: url("./KingSpades.png");
     background-size: contain;
     border-radius: 10px;
     margin: 20px -40px;
@@ -83,15 +83,15 @@ footer {
 }
 
 .deck1 {
-    background: center url("../deck1.jpg");
+    background: center url("./deck1.jpg");
 }
 
 .deck2 {
-    background: center url("../deck2.jpg");
+    background: center url("./deck2.jpg");
 }
 
 .deck3 {
-    background: center url("../deck3.jpg");
+    background: center url("./deck3.jpg");
 }
 
 .selected {
