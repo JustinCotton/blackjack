@@ -13,7 +13,7 @@ h1 {
 
 h2 {
     font-family: 'Playball', cursive;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 button {
@@ -42,6 +42,7 @@ aside {
 
 #bet {
     font-family: 'Aclonica', sans-serif;
+    font-size: 30px;
 }
 
 aside h3 {
