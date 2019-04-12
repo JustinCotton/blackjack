@@ -96,7 +96,7 @@ let playerScore = 0;
 let insuranceBet = 0;
 let dealerHand = [];
 let playerHand = [];
-let cardBack = "url(./deck1.jpg)"
+let cardBack = "url('./deck1.jpg')"
 let deckOfCards = [
     {name: "2 of Hearts", value: 2, face: "./2Hearts.png"},
     {name: "3 of Hearts", value: 3, face: "./3Hearts.png"},
@@ -279,21 +279,21 @@ $(function() {
     });
 
     $(".deck1").click(function () {
-        cardBack = "url(./deck1.jpg)";
+        cardBack = "url('./deck1.jpg')";
         $(".deck1").addClass("selected")
         $(".deck2").removeClass("selected")
         $(".deck3").removeClass("selected")
     });
 
     $(".deck2").click(function () {
-        cardBack = "url(./deck2.jpg)"
+        cardBack = "url('./deck2.jpg')"
         $(".deck1").removeClass("selected")
         $(".deck2").addClass("selected")
         $(".deck3").removeClass("selected")
     });
 
     $(".deck3").click(function () {
-        cardBack = "url(./deck3.jpg)"
+        cardBack = "url('./deck3.jpg')"
         $(".deck1").removeClass("selected")
         $(".deck2").removeClass("selected")
         $(".deck3").addClass("selected")
