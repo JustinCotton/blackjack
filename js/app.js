@@ -177,6 +177,12 @@ const dealCards = () => {
     $("#hit").show();
     $("#stand").show();
     $("#doubleDown").show();
+    $("dealerCard2").hide();
+    $("dealerCard3").hide();
+    $("dealerCard4").hide();
+    $("playerCard2").hide();
+    $("playerCard3").hide();
+    $("playerCard4").hide();
     // shuffle deck of 52 cards (no Jokers)
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();
@@ -227,12 +233,6 @@ const surrender = () => {
 // instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
 
 $(function() {
-    $("dealerCard2").hide();
-    $("dealerCard3").hide();
-    $("dealerCard4").hide();
-    $("playerCard2").hide();
-    $("playerCard3").hide();
-    $("playerCard4").hide();
     // Listen for click events on "Deal" button
     $("#deal").click(function (event) {
         event.preventDefault();
