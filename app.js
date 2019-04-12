@@ -179,25 +179,25 @@ const dealCards = () => {
     $("#hit").show();
     $("#stand").show();
     $("#doubleDown").show();
-    $("dealerCard2").hide();
-    $("dealerCard3").hide();
-    $("dealerCard4").hide();
-    $("playerCard2").hide();
-    $("playerCard3").hide();
-    $("playerCard4").hide();
+    $("#dealerCard2").hide();
+    $("#dealerCard3").hide();
+    $("#dealerCard4").hide();
+    $("#playerCard2").hide();
+    $("#playerCard3").hide();
+    $("#playerCard4").hide();
     // shuffle deck of 52 cards (no Jokers) and deal two cards each to Dealer and Player
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();
         thisCard = "#playerCard" + i
         let cardFace = "url(" + playerHand[i].face + ")";
-        $(thisCard).css("background", cardFace);
+        $(thisCard).css("background", cardFace; "background-size", "contain");
     }
     for (let i = 0; i < 2; i++) {
         dealerHand[i] = shuffle();
         thisCard = "#dealerCard" + i
-        $(thisCard).css("background", dealerHand[i].face);
+        $(thisCard).css("background", dealerHand[i].face; "background-size", "contain");
     }
-    $(dealerCard0).css("background", cardBack);
+    $(dealerCard0).css("background", cardBack; "background-size", "contain");
 };
 
 const playerTurn = () => {
