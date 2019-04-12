@@ -62,6 +62,10 @@ footer {
     background: center url("../deck3.jpg");
 }
 
+.selected {
+    border: 6px solid white;
+}
+
 .score {    
     background-color: red;
     border-radius: 15px;
