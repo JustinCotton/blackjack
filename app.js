@@ -195,7 +195,7 @@ const dealCards = () => {
     for (let i = 0; i < 2; i++) {
         dealerHand[i] = shuffle();
         thisCard = "#dealerCard" + i
-        let cardFace = "url(" + playerHand[i].face + ")";
+        let cardFace = "url(" + dealerHand[i].face + ")";
         $(thisCard).css({"background": dealerHand[i].face, "background-size": "contain"});
     }
     $(dealerCard0).css("background", cardBack);
