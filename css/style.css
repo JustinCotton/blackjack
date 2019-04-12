@@ -43,8 +43,7 @@ footer {
 }
 
 .deck {
-    background: center url("../deck1.jpg");
-    background-size: cover;
+    background: center cover;
     border-radius: 15px;
     margin: 20px auto;
     height: 150px;
