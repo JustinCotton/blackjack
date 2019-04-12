@@ -23,6 +23,7 @@ main {
 }
 
 aside {
+    font-family: 'Aclonica', sans-serif;
     display: inline-block;
     width: 20%;
 }
