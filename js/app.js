@@ -96,7 +96,7 @@ let playerScore = 0;
 let insuranceBet = 0;
 let dealerHand = [];
 let playerHand = [];
-let cardBack = "url(./img/deck1.jpg)"
+let cardBack = "url(./deck1.jpg)"
 let deckOfCards = [
     {name: "2 of Hearts", value: 2, face: "./2Hearts.png"},
     {name: "3 of Hearts", value: 3, face: "./3Hearts.png"},
@@ -150,9 +150,7 @@ let deckOfCards = [
     {name: "Queen of Clubs", value: 10, face: "./QueenClubs.png"},
     {name: "King of Clubs", value: 10, face: "./KingClubs.png"},
     {name: "Ace of Clubs", value: 11, face: "./AceClubs.png"},
-]
-
-for (i = 0; i < )
+];
 
 const getBetAmountFromPlayer = () => {
     currentBet = parseInt($("#bet").val())
