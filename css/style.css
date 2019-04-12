@@ -47,12 +47,14 @@ aside {
 
 aside h3 {
     font-family: 'Playball', cursive;
+    font-size: 20px;
     padding-top: 10%;
 }
 
 aside p {
     font-family: 'Aclonica', sans-serif;
     font-size: 30px;
+    margin: 0;
 }
 
 footer {
