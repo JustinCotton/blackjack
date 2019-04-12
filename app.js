@@ -192,13 +192,13 @@ const dealCards = () => {
         let cardFace = "url(" + playerHand[i].face + ")";
         $(thisCard).css({"background": cardFace, "background-size": "contain"});
     }
-    for (let i = 0; i < 2; i++) {
-        dealerHand[i] = shuffle();
-        thisCard = "#dealerCard" + i
-        let cardFace = "url(" + dealerHand[i].face + ")";
-        $(thisCard).css({"background": dealerHand[i].face, "background-size": "contain"});
+    for (let j = 0; j < 2; j++) {
+        dealerHand[j] = shuffle();
+        thisCard = "#dealerCard" + j
+        let cardFace = "url(" + dealerHand[j].face + ")";
+        $(thisCard).css({"background": dealerHand[j].face, "background-size": "contain"});
     }
-    $(dealerCard0).css("background", cardBack);
+    $("dealerCard0").css("background", cardBack);
 };
 
 const playerTurn = () => {
