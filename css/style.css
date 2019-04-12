@@ -6,8 +6,9 @@ body {
 }
 
 h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 50px;
+    font-family: 'Playball', cursive;
+    font-size: 60px;
+    margin: 0;
 }
 
 h2 {
@@ -35,6 +36,10 @@ aside {
     font-family: 'Aclonica', sans-serif;
     display: inline-block;
     width: 20%;
+}
+
+#cash {
+    font-family: 'Aclonica', sans-serif;
 }
 
 aside h3 {
