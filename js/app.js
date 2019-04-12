@@ -181,7 +181,8 @@ const dealCards = () => {
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();
         thisCard = "#playerCard" + i
-        $(thisCard).css("background", "url(" + playerHand[i].face + ")");
+        let cardFace = "url(" + playerHand[i].face + ")";
+        $(thisCard).css("background", cardFace);
     }
     for (let i = 0; i < 2; i++) {
         dealerHand[i] = shuffle();
