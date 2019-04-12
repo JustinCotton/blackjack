@@ -33,8 +33,11 @@ main {
 aside {
     font-family: 'Aclonica', sans-serif;
     display: inline-block;
-    padding-top: 10%;
     width: 20%;
+}
+
+aside h3 {
+    margin-top: 10%;
 }
 
 aside p {
