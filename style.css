@@ -73,11 +73,11 @@ footer {
 }
 
 .deck {
-    background-size: cover;
+    background-size: contain center;
     border-radius: 15px;
     margin: 20px auto;
-    width: 100px;
-    height: 150px;
+    width: 120px;
+    height: 174px;
 }
 
 .deck1 {
