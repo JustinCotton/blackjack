@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Playball', cursive;
 }
 
 button {
@@ -21,6 +21,7 @@ button {
     border-radius: 10px;
     color: white;
     background-color: red;
+    font-family: 'Playball', cursive;
     font-size: 30px;
     margin: 8px;
     width: 220px;
