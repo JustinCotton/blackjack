@@ -12,7 +12,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'Playball', cursive;
+    font-family: 'Playball', cursive;\
+    font-size: 40px;
 }
 
 button {
@@ -22,7 +23,7 @@ button {
     color: white;
     background-color: red;
     font-family: 'Playball', cursive;
-    font-size: 30px;
+    font-size: 40px;
     margin: 8px;
     width: 220px;
 }
