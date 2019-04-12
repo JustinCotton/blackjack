@@ -65,7 +65,7 @@ footer {
 
 .cardSpot {
     border: 6px solid white;
-    background: center cover;
+    background: cover;
     border-radius: 10px;
     margin: 20px -40px;
     height: 150px;
@@ -135,16 +135,3 @@ footer {
 #hit, #stand, #doubleDown, #split, #insurance, #surrender {
     display: none;
 }
-
-/* font-family: 'Fascinate Inline', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Lobster', cursive;
-font-family: 'Righteous', cursive;
-font-family: 'Comfortaa', cursive;
-font-family: 'Playball', cursive;
-font-family: 'Kaushan Script', cursive;
-font-family: 'Philosopher', sans-serif;
-font-family: 'Prosto One', cursive;
-font-family: 'Rochester', cursive;
-font-family: 'Aclonica', sans-serif;
-font-family: 'Berkshire Swash', cursive; */
