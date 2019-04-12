@@ -174,6 +174,10 @@ const shuffle = () => {
 }
 
 const dealCards = () => {
+    $("#dealerCard0").css("visibility", "visible");
+    $("#dealerCard1")).css("visibility", "visible");
+    $("#playerCard0").css("visibility", "visible");
+    $("#playerCard1")).css("visibility", "visible");
     $("#deal").hide();
     $("#hit").show();
     $("#stand").show();
