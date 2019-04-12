@@ -25,7 +25,7 @@ button {
     font-family: 'Playball', cursive;
     font-size: 40px;
     margin: 8px;
-    width: 220px;
+    /* width: 240px; */
 }
 
 main {
@@ -43,6 +43,7 @@ aside {
 #bet {
     font-family: 'Aclonica', sans-serif;
     font-size: 30px;
+    padding: 5px;
 }
 
 aside h3 {
