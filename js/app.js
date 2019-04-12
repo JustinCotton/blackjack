@@ -276,4 +276,16 @@ $(function() {
         surrender(getBetAmountFromPlayer); // will return half of currentBet to player, then Game Over
     });
 
+    $(".deck1").click(function () {
+        cardBack = "url(./deck1.jpg)"
+    });
+
+    $(".deck2").click(function () {
+        cardBack = "url(./deck2.jpg)"
+    });
+
+    $(".deck3").click(function () {
+        cardBack = "url(./deck3.jpg)"
+    });
+
 });
