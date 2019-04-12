@@ -185,7 +185,7 @@ const dealCards = () => {
     $("playerCard2").hide();
     $("playerCard3").hide();
     $("playerCard4").hide();
-    // shuffle deck of 52 cards (no Jokers)
+    // shuffle deck of 52 cards (no Jokers) and deal two cards each to Dealer and Player
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();
         thisCard = "#playerCard" + i
