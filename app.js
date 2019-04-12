@@ -188,13 +188,15 @@ const dealCards = () => {
     // shuffle deck of 52 cards (no Jokers) and deal two cards each to Dealer and Player
     for (let i = 0; i < 2; i++) {
         playerHand[i] = shuffle();
-        dealerHand[i] = shuffle();
-        playerCard = "#playerCard" + i;
-        dealerCard = "#dealerCard" + i;
-        let playerFace = "url(" + playerHand[i].face + ")";
-        $(playerCard).css({"background": playerFace, "background-size": "contain"})
-        let dealerFace = "url(" + playerHand[i].face + ")";
-        $(playerCard).css({"background": dealerFace, "background-size": "contain"})
+        thisCard = "#playerCard" + i;
+        let cardFace = "url(" + playerHand[i].face + ")";
+        $(thisCard).css({"background": cardFace, "background-size": "contain"});
+    }
+    for (let j = 0; j < 2; j++) {
+        dealerHand[j] = shuffle();
+        thisCard = "#dealerCard" + j;
+        let cardFace = "url(" + dealerHand[j].face + ")";
+        $(thisCard).css({"background": cardFace, "background-size": "contain"});
     }
     $("dealerCard0").css({"background": cardBack, "background-size": "contain"});
     $("#playerScore").text(getHandValue(playerHand));
