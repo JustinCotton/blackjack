@@ -34,7 +34,7 @@ footer {
 
 .cardSpot {
     border: 6px solid white;
-    background-size: cover;
+    background: center cover;
     border-radius: 10px;
     margin: 20px -40px;
     height: 150px;
