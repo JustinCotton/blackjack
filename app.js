@@ -211,6 +211,12 @@ const getHandValue = (hand) => {
     return sum;
 };
 
+const checkForPlayerBlackjack = (sum) => {
+    if (sum == 21) {
+        $("headline").text("BLACKJACK!").css("background", "red").show();
+    }
+};
+
 const playerTurn = () => {
     return 
 };
@@ -220,28 +226,33 @@ const dealerTurn = () => {
 };
 
 const hitPlayer = () => {
+    $("doubleDown").hide();
     $("insurance").hide();
-    return 
+    $("surrender").hide();
+    playerHand.push(shuffle());
+    getHandValue(playerHand);
+    $("#playerScore").text(getHandValue(playerHand));
+    checkForPlayerBlackjack(getHandValue());
 };
 
-const doubleDown = (initialBet) => {
-    $("insurance").hide();
-    return 
-};
+// const doubleDown = (initialBet) => {
+//     $("insurance").hide();
+//     return 
+// };
 
-const split = () => {
-    $("insurance").hide();
-    return 
-};
+// const split = () => {
+//     $("insurance").hide();
+//     return 
+// };
 
-const insurance = () => {
-    $("insurance").hide();
-    return 
-};
+// const insurance = () => {
+//     $("insurance").hide();
+//     return 
+// };
 
-const surrender = () => {
-    return 
-};
+// const surrender = () => {
+//     return 
+// };
 
 // instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
 
@@ -309,5 +320,4 @@ $(function() {
         $(".deck2").removeClass("selected")
         $(".deck3").addClass("selected")
     });
-
 });
