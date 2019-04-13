@@ -290,8 +290,8 @@ const insurance = () => {
     return 
 };
 
-const surrender = (currentBet) => {
-    playerBalance = playerBalance + (currentBet / 2);
+const surrender = (bet) => {
+    playerBalance += (bet / 2);
     $("#cash").text("$" + playerBalance);
     $("#headline").text("Surrender!  Half of Bet Returned!").css("background", "red");
     $("#deal").show();
@@ -344,7 +344,7 @@ $(function() {
     // Listen for click events on "Surrender" button
     $("#surrender").click(function (event) {
         event.preventDefault();
-        surrender(getBetAmountFromPlayer); // will return half of currentBet to player, then Game Over
+        surrender(getBetAmountFromPlayer); // will return half of the current bet to player, then Game Over
     });
 
     $(".deck1").click(function () {
