@@ -264,7 +264,7 @@ const hitPlayer = (hand) => {
         $("#hit").hide();
         $("#stand").hide();
         $("#doubleDown").hide();
-    }
+    // }
 };
 
 // const doubleDown = (initialBet) => {
