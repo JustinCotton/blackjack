@@ -171,6 +171,11 @@ const shuffle = () => {
 }
 
 const dealCards = () => {
+    dealerScore = 0;
+    playerScore = 0;
+    insuranceBet = 0;
+    dealerHand = [];
+    playerHand = [];
     $("#headline").text("Blackjack").css("background", "none");
     $("#dealerCard0").css("visibility", "visible");
     $("#dealerCard1").css("visibility", "visible");
