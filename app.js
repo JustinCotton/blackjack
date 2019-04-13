@@ -293,7 +293,7 @@ const insurance = () => {
 const surrender = (currentBet) => {
     playerBalance = playerBalance + (currentBet / 2);
     $("#cash").text("$" + playerBalance);
-    $("#headline").text("BUST! Player Loses").css("background", "red");
+    $("#headline").text("Surrender!  Half of Bet Returned!").css("background", "red");
     $("#deal").show();
     $("#hit").hide();
     $("#stand").hide();
