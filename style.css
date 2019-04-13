@@ -25,11 +25,9 @@ button {
     font-family: 'Playball', cursive;
     font-size: 40px;
     margin: 8px;
-    /* width: 240px; */
 }
 
 main {
-    /* float: left; */
     display: inline-block;
     width: 60%;
 }
