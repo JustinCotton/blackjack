@@ -265,7 +265,7 @@ const hitDealer = (hand) => {
     dealerHand.push(shuffle());
     let dealerValue = getHandValue(dealerHand);
     let playerValue = getHandValue(playerHand);
-    $("#dealerScore").text(dealValue);
+    $("#dealerScore").text(dealerValue);
     let newCard = "#dealerCard" + cardSlot;
     let cardFace = "url(" + dealerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
