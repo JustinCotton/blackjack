@@ -240,12 +240,13 @@ const checkForPlayerBust = (sum) => {
         $("#hit").hide();
         $("#stand").hide();
         $("#doubleDown").hide();
+        return true;
     }
 };
 
-const dealerTurn = () => {
-    return 
-};
+// const dealerTurn = () => {
+//     return 
+// };
 
 const hitPlayer = (playerHand) => {
     $("#doubleDown").hide();
@@ -257,7 +258,13 @@ const hitPlayer = (playerHand) => {
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    checkForPlayerBust(getHandValue(playerHand));
+    if (getHandValue(playerHand) > 21) {
+        $("headline").text("BUST! Player Loses").css("background", "red").show();
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
+    }
 };
 
 // const doubleDown = (initialBet) => {
