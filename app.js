@@ -225,7 +225,7 @@ const dealerTurn = () => {
     return 
 };
 
-const hitPlayer = () => {
+const hitPlayer = (playerHand) => {
     $("#doubleDown").hide();
     $("#insurance").hide();
     $("#surrender").hide();
@@ -270,7 +270,7 @@ $(function() {
     // Listen for click events on "Hit" button
     $("#hit").click(function (event) {
         event.preventDefault();
-        hitPlayer(getHandValue());
+        hitPlayer(playerHand);
     });
 
     // Listen for click events on "Stand" button
