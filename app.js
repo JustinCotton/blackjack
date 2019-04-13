@@ -274,24 +274,24 @@ const hitPlayer = (hand) => {
     }
 };
 
-// const doubleDown = (initialBet) => {
-//     $("insurance").hide();
-//     return 
-// };
+const doubleDown = (initialBet) => {
+    $("insurance").hide();
+    return 
+};
 
-// const split = () => {
-//     $("insurance").hide();
-//     return 
-// };
+const split = () => {
+    $("insurance").hide();
+    return 
+};
 
-// const insurance = () => {
-//     $("insurance").hide();
-//     return 
-// };
+const insurance = () => {
+    $("insurance").hide();
+    return 
+};
 
-// const surrender = () => {
-//     return 
-// };
+const surrender = () => {
+    return 
+};
 
 // instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
 
