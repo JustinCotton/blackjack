@@ -281,7 +281,7 @@ const dealerTurn = () => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (17 < dealerValue < 21) {    
+    } else if (16 < dealerValue < 21) {    
         if (dealerValue > playerValue) {
             $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
             $("#deal").show();
