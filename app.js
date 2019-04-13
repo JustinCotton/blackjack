@@ -182,6 +182,7 @@ const dealCards = () => {
     $("#dealerCard1").css("visibility", "visible");
     $("#playerCard0").css("visibility", "visible");
     $("#playerCard1").css("visibility", "visible");
+    $("#bet").prop('disabled', true);
     $("#deal").hide();
     $("#hit").show();
     $("#stand").show();
@@ -272,6 +273,7 @@ const hitPlayer = (hand) => {
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
+        $("#bet").prop('disabled', false);
     }
 };
 
