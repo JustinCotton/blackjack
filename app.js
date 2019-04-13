@@ -155,7 +155,7 @@ let deckOfCards = [
 const getBetAmountFromPlayer = () => {
     currentBet = parseInt($("#bet").val())
     if (currentBet > playerBalance) {
-        $("headline").text("Insuffient Funds!").css("background", "red");
+        alert("Insufficient Funds!");
         $("#bet").val("");
         // $('.footer').show(0).delay(3000).hide(0);
     } else {
@@ -264,13 +264,13 @@ const hitPlayer = (hand) => {
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    // if (getHandValue(playerHand) > 21) {
+    if (parseInt($("#playerScore").text) > 21) {
         $("#headline").text("BUST! Player Loses").css("background", "red").show();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
         $("#doubleDown").hide();
-    // }
+    }
 };
 
 // const doubleDown = (initialBet) => {
