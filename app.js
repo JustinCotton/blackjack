@@ -261,11 +261,12 @@ const hitPlayer = (hand) => {
     $("#surrender").hide();
     let cardSlot = hand.length;
     playerHand.push(shuffle());
-    $("#playerScore").text(getHandValue(playerHand));
+    let value = getHandValue(playerHand)
+    $("#playerScore").text(value);
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    if (parseInt($("#playerScore").text) > 21) {
+    if (value > 21) {
         $("#headline").text("BUST! Player Loses").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
