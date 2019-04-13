@@ -226,13 +226,13 @@ const dealerTurn = () => {
 };
 
 const hitPlayer = () => {
-    $("doubleDown").hide();
-    $("insurance").hide();
-    $("surrender").hide();
-    cardSlot = playerHand.length;
+    $("#doubleDown").hide();
+    $("#insurance").hide();
+    $("#surrender").hide();
+    let cardSlot = playerHand.length;
     playerHand.push(shuffle());
     $("#playerScore").text(getHandValue(playerHand));
-    newCard = "#playerCard" + cardSlot;
+    let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     checkForPlayerBlackjack(getHandValue());
