@@ -262,12 +262,13 @@ const dealerTurn = () => {
 const hitDealer = (hand) => {
     let cardSlot = hand.length;
     dealerHand.push(shuffle());
-    let value = getHandValue(dealerHand);
+    let dealerValue = getHandValue(dealerHand);
+    let playerValue = getHandValue(playerHand);
     $("#dealerScore").text(value);
     let newCard = "#dealerCard" + cardSlot;
     let cardFace = "url(" + dealerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    if (value > 21) {
+    if (dealerValue > 21) {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#deal").show();
@@ -276,7 +277,7 @@ const hitDealer = (hand) => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (getHandValue(dealerHand) > getHandValue(playerHand)) {
+    } else if (dealerValue > playerValue) {
         $("headline").text("Sorry! Dealer Wins!").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
@@ -284,7 +285,7 @@ const hitDealer = (hand) => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (getHandValue(dealerHand) < getHandValue(playerHand)) {
+    } else if (dealerValue < playerValue) {
         $("headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#deal").show();
@@ -293,7 +294,7 @@ const hitDealer = (hand) => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (getHandValue(dealerHand) = getHandValue(playerHand)){
+    } else if (dealerValue = playerValue){
         $("headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#deal").show();
