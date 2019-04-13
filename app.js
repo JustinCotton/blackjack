@@ -225,7 +225,7 @@ const getHandValue = (hand) => {
 
 const checkForPlayerBlackjack = (sum) => {
     if (sum == 21) {
-        $("headline").text("BLACKJACK!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
+        $("#headline").text("BLACKJACK!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
         $("#deal").show();
         $("#hit").hide();
@@ -237,7 +237,7 @@ const checkForPlayerBlackjack = (sum) => {
 
 const checkForDealerBlackjack = (sum) => {
     if (sum == 21) {
-        $("headline").text("Dealer Has Blackjack! Player Loses!").css("background", "red");
+        $("#headline").text("Dealer Has Blackjack! Player Loses!").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
