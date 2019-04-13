@@ -171,6 +171,7 @@ const shuffle = () => {
 }
 
 const dealCards = () => {
+    $("#headline").text("Blackjack").css("background", "none");
     $("#dealerCard0").css("visibility", "visible");
     $("#dealerCard1").css("visibility", "visible");
     $("#playerCard0").css("visibility", "visible");
