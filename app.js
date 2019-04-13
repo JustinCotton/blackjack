@@ -156,7 +156,7 @@ const getBetAmountFromPlayer = () => {
     currentBet = parseInt($("#bet").val())
     if (currentBet > playerBalance) {
         // alert("Insufficient Funds!");
-        $("#headline").text("BUST! Player Loses").css("background", "red");
+        $("#headline").text("Insufficient Funds!").css("background", "red");
         $("#bet").val("");
         // $('.footer').show(0).delay(3000).hide(0);
     } else {
