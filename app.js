@@ -244,7 +244,7 @@ const checkForDealerBlackjack = (sum) => {
 
 const checkForPlayerBust = (sum) => {
     if (sum > 21) {
-        $("headline").text("BUST! Player Loses").css("background", "red").show();
+        $("headline").text("BUST! Player Loses").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -253,9 +253,40 @@ const checkForPlayerBust = (sum) => {
     }
 };
 
-// const dealerTurn = () => {
-//     return 
-// };
+const dealerTurn = () => {
+    while (getHandValue(dealerHand) < 17) {
+        hitDealer(dealerHand);
+    }
+    if (getHandValue(dealerHand) > getHandValue(playerHand)) {
+        $("headline").text("Sorry! Dealer Wins!").css("background", "red");
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
+    } else if (getHandValue(dealerHand) < getHandValue(playerHand)) {
+        $("headline").text("You Win!").css("background", "red");
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
+    } else {
+        $("headline").text("PUSH!").css("background", "red");
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
+    }
+};
+
+const hitDealer = (hand) => {
+    let cardSlot = hand.length;
+    dealerHand.push(shuffle());
+    let value = getHandValue(dealerHand);
+    $("#dealerScore").text(value);
+    let newCard = "#dealerCard" + cardSlot;
+    let cardFace = "url(" + dealerHand[cardSlot].face + ")";
+    $(newCard).css({"background": cardFace, "background-size": "contain"});
+};
 
 const hitPlayer = (hand) => {
     $("#doubleDown").hide();
@@ -277,9 +308,11 @@ const hitPlayer = (hand) => {
     }
 };
 
-const doubleDown = (initialBet) => {
+const doubleDown = (bet) => {
+    currentBet += bet;
     $("insurance").hide();
-    return 
+    $("doubleDown").hide();
+    hitPlayer(); 
 };
 
 const split = () => {
@@ -293,7 +326,7 @@ const insurance = () => {
 };
 
 const surrender = (bet) => {
-    playerBalance += (bet / 2);
+    playerBalance += parseInt(bet / 2);
     $("#cash").text("$" + playerBalance);
     $("#headline").text("Surrender!  Half of Bet Returned!").css("background", "red");
     $("#deal").show();
