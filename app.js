@@ -225,7 +225,7 @@ const getHandValue = (hand) => {
 
 const checkForPlayerBlackjack = (sum) => {
     if (sum == 21 && !checkForDealerBlackjack(getHandValue(dealerHand))) {
-        $("#headline").text("BLACKJACK!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
+        $("#headline").text("Blackjack!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
         $("#cash").text("$" + playerBalance);
         $("#deal").show();
@@ -234,7 +234,7 @@ const checkForPlayerBlackjack = (sum) => {
         $("#doubleDown").hide();
         $("#surrender").hide();
     } else if (sum == 21 && checkForDealerBlackjack(getHandValue(dealerHand))) {
-        $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
+        $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
         $("#deal").show();
@@ -301,7 +301,7 @@ const dealerTurn = () => {
             $("#surrender").hide();
             $("#bet").prop('disabled', false);
         } else if (dealerValue = playerValue){
-            $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
+            $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
             playerBalance += currentBet;
             $("#cash").text("$" + playerBalance);
             $("#deal").show();
@@ -351,7 +351,7 @@ const hitDealer = (hand) => {
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
     } else if (dealerValue = playerValue){
-        $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
+        $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
         $("#deal").show();
