@@ -248,11 +248,11 @@ const checkForPlayerBust = (sum) => {
 //     return 
 // };
 
-const hitPlayer = (playerHand) => {
+const hitPlayer = (hand) => {
     $("#doubleDown").hide();
     $("#insurance").hide();
     $("#surrender").hide();
-    let cardSlot = playerHand.length;
+    let cardSlot = hand.length;
     playerHand.push(shuffle());
     $("#playerScore").text(getHandValue(playerHand));
     let newCard = "#playerCard" + cardSlot;
