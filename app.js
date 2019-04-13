@@ -298,6 +298,7 @@ const surrender = (currentBet) => {
     $("#hit").hide();
     $("#stand").hide();
     $("#doubleDown").hide();
+    $("#surrender").hide();
 };
 
 // instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
