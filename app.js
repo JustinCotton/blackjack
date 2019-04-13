@@ -224,9 +224,18 @@ const getHandValue = (hand) => {
 };
 
 const checkForPlayerBlackjack = (sum) => {
-    if (sum == 21) {
+    if (sum == 21 && !checkForDealerBlackjack(getHandValue(dealerHand))) {
         $("#headline").text("BLACKJACK!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
+        $("#cash").text("$" + playerBalance);
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
+        $("#surrender").hide();
+    } else if (sum == 21 && checkForDealerBlackjack(getHandValue(dealerHand))) {
+        $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
+        playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
         $("#deal").show();
         $("#hit").hide();
