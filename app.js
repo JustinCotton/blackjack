@@ -211,14 +211,22 @@ const getHandValue = (hand) => {
     return sum;
 };
 
+const checkForDealerBlackjack = (sum) => {
+    if (sum == 21) {
+        $("headline").text("BLACKJACK!").css("background", "red").show();
+    }
+};
+
 const checkForPlayerBlackjack = (sum) => {
     if (sum == 21) {
         $("headline").text("BLACKJACK!").css("background", "red").show();
     }
 };
 
-const playerTurn = () => {
-    return 
+const checkForPlayerBust = (sum) => {
+    if (sum > 21) {
+        $("headline").text("BUST! Player Loses").css("background", "red").show();
+    }
 };
 
 const dealerTurn = () => {
@@ -236,6 +244,7 @@ const hitPlayer = (playerHand) => {
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     checkForPlayerBlackjack(getHandValue(playerHand));
+    checkForPlayerBust(getHandValue(playerHand));
 };
 
 // const doubleDown = (initialBet) => {
