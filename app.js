@@ -229,9 +229,12 @@ const hitPlayer = () => {
     $("doubleDown").hide();
     $("insurance").hide();
     $("surrender").hide();
+    cardSlot = playerHand.length;
     playerHand.push(shuffle());
-    getHandValue(playerHand);
     $("#playerScore").text(getHandValue(playerHand));
+    newCard = "#playerCard" + cardSlot;
+    let cardFace = "url(" + playerHand[cardSlot].face + ")";
+    $(newCard).css({"background": cardFace, "background-size": "contain"})
     checkForPlayerBlackjack(getHandValue());
 };
 
