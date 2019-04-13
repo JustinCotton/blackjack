@@ -258,7 +258,7 @@ const hitPlayer = (hand) => {
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    if (getHandValue(playerHand) > 21) {
+    // if (getHandValue(playerHand) > 21) {
         $("headline").text("BUST! Player Loses").css("background", "red").show();
         $("#deal").show();
         $("#hit").hide();
