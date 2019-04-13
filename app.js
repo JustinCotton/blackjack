@@ -201,6 +201,8 @@ const dealCards = () => {
     $("dealerCard0").css({"background": cardBack, "background-size": "contain"});
     $("#playerScore").text(getHandValue(playerHand));
     $("#dealerScore").text(getHandValue(dealerHand));
+    checkForPlayerBlackjack(getHandValue(playerHand));
+    checkForDealerBlackjack(getHandValue(dealerHand));
 };
 
 const getHandValue = (hand) => {
@@ -211,21 +213,33 @@ const getHandValue = (hand) => {
     return sum;
 };
 
-const checkForDealerBlackjack = (sum) => {
+const checkForPlayerBlackjack = (sum) => {
     if (sum == 21) {
-        $("headline").text("BLACKJACK!").css("background", "red").show();
+        $("headline").text("BLACKJACK!").css("background", "red");
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
     }
 };
 
-const checkForPlayerBlackjack = (sum) => {
+const checkForDealerBlackjack = (sum) => {
     if (sum == 21) {
-        $("headline").text("BLACKJACK!").css("background", "red").show();
+        $("headline").text("Sorry! Dealer Has Blackjack!").css("background", "red");
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
     }
 };
 
 const checkForPlayerBust = (sum) => {
     if (sum > 21) {
         $("headline").text("BUST! Player Loses").css("background", "red").show();
+        $("#deal").show();
+        $("#hit").hide();
+        $("#stand").hide();
+        $("#doubleDown").hide();
     }
 };
 
@@ -243,7 +257,6 @@ const hitPlayer = (playerHand) => {
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    checkForPlayerBlackjack(getHandValue(playerHand));
     checkForPlayerBust(getHandValue(playerHand));
 };
 
