@@ -273,6 +273,8 @@ const hitDealer = (hand) => {
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
+        $("#doubleDown").hide();
+        $("#surrender").hide();
         $("#bet").prop('disabled', false);
     } else if (getHandValue(dealerHand) > getHandValue(playerHand)) {
         $("headline").text("Sorry! Dealer Wins!").css("background", "red");
@@ -280,6 +282,8 @@ const hitDealer = (hand) => {
         $("#hit").hide();
         $("#stand").hide();
         $("#doubleDown").hide();
+        $("#surrender").hide();
+        $("#bet").prop('disabled', false);
     } else if (getHandValue(dealerHand) < getHandValue(playerHand)) {
         $("headline").text("You Win!").css("background", "red");
         playerBalance += (2 * currentBet);
@@ -287,6 +291,8 @@ const hitDealer = (hand) => {
         $("#hit").hide();
         $("#stand").hide();
         $("#doubleDown").hide();
+        $("#surrender").hide();
+        $("#bet").prop('disabled', false);
     } else {
         $("headline").text("PUSH! Player's Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
@@ -294,6 +300,7 @@ const hitDealer = (hand) => {
         $("#hit").hide();
         $("#stand").hide();
         $("#doubleDown").hide();
+        $("#surrender").hide();
     }
 };
 
