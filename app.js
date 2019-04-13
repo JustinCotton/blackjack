@@ -244,7 +244,7 @@ const checkForDealerBlackjack = (sum) => {
 
 const checkForPlayerBust = (sum) => {
     if (sum > 21) {
-        $("headline").text("BUST! Player Loses").css("background", "red");
+        $("headline").text("BUST! Player Loses!").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -293,7 +293,7 @@ const hitDealer = (hand) => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else {
+    } else if (getHandValue(dealerHand) = getHandValue(playerHand)){
         $("headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#deal").show();
