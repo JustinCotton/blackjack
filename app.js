@@ -235,7 +235,7 @@ const hitPlayer = (playerHand) => {
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
-    checkForPlayerBlackjack(getHandValue());
+    checkForPlayerBlackjack(getHandValue(playerHand));
 };
 
 // const doubleDown = (initialBet) => {
