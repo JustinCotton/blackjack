@@ -234,7 +234,7 @@ const hitPlayer = () => {
     $("#playerScore").text(getHandValue(playerHand));
     newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
-    $(newCard).css({"background": cardFace, "background-size": "contain"})
+    $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     checkForPlayerBlackjack(getHandValue());
 };
 
