@@ -185,6 +185,7 @@ const dealCards = () => {
     $("#deal").hide();
     $("#hit").show();
     $("#stand").show();
+    $("#surrender").show();
     $("#doubleDown").show();
     $("#dealerCard2").hide();
     $("#dealerCard3").hide();
@@ -261,7 +262,7 @@ const hitPlayer = (hand) => {
     $("#surrender").hide();
     let cardSlot = hand.length;
     playerHand.push(shuffle());
-    let value = getHandValue(playerHand)
+    let value = getHandValue(playerHand);
     $("#playerScore").text(value);
     let newCard = "#playerCard" + cardSlot;
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
@@ -271,7 +272,6 @@ const hitPlayer = (hand) => {
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
-        $("#doubleDown").hide();
     }
 };
 
@@ -290,8 +290,14 @@ const insurance = () => {
     return 
 };
 
-const surrender = () => {
-    return 
+const surrender = (currentBet) => {
+    playerBalance = playerBalance + (currentBet / 2);
+    $("#cash").text("$" + playerBalance);
+    $("#headline").text("BUST! Player Loses").css("background", "red");
+    $("#deal").show();
+    $("#hit").hide();
+    $("#stand").hide();
+    $("#doubleDown").hide();
 };
 
 // instead of separate functions for blackjack, win, lose, and push, I'll use an if statement that handles the payouts and changes the text [$(#result).text("Blackjack!")] of a pop-up message that announces the result
