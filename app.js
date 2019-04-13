@@ -281,33 +281,35 @@ const dealerTurn = () => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (dealerValue > playerValue) {
-        $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
-        $("#deal").show();
-        $("#hit").hide();
-        $("#stand").hide();
-        $("#doubleDown").hide();
-        $("#surrender").hide();
-        $("#bet").prop('disabled', false);
-    } else if (dealerValue < playerValue) {
-        $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
-        playerBalance += (2 * currentBet);
-        $("#cash").text("$" + playerBalance);
-        $("#deal").show();
-        $("#hit").hide();
-        $("#stand").hide();
-        $("#doubleDown").hide();
-        $("#surrender").hide();
-        $("#bet").prop('disabled', false);
-    } else if (dealerValue = playerValue){
-        $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
-        playerBalance += currentBet;
-        $("#cash").text("$" + playerBalance);
-        $("#deal").show();
-        $("#hit").hide();
-        $("#stand").hide();
-        $("#doubleDown").hide();
-        $("#surrender").hide();
+    } else if (17 < dealerValue < 21) {    
+        if (dealerValue > playerValue) {
+            $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
+            $("#deal").show();
+            $("#hit").hide();
+            $("#stand").hide();
+            $("#doubleDown").hide();
+            $("#surrender").hide();
+            $("#bet").prop('disabled', false);
+        } else if (dealerValue < playerValue) {
+            $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
+            playerBalance += (2 * currentBet);
+            $("#cash").text("$" + playerBalance);
+            $("#deal").show();
+            $("#hit").hide();
+            $("#stand").hide();
+            $("#doubleDown").hide();
+            $("#surrender").hide();
+            $("#bet").prop('disabled', false);
+        } else if (dealerValue = playerValue){
+            $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
+            playerBalance += currentBet;
+            $("#cash").text("$" + playerBalance);
+            $("#deal").show();
+            $("#hit").hide();
+            $("#stand").hide();
+            $("#doubleDown").hide();
+            $("#surrender").hide();
+        }
     }
 };
 
