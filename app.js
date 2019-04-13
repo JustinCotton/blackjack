@@ -227,6 +227,7 @@ const checkForPlayerBlackjack = (sum) => {
     if (sum == 21) {
         $("#headline").text("BLACKJACK!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
+        $("#cash").text("$" + playerBalance);
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
