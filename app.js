@@ -275,6 +275,7 @@ const hitDealer = (hand) => {
     if (dealerValue > 21) {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
+        $("#cash").text("$" + playerBalance);
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -292,6 +293,7 @@ const hitDealer = (hand) => {
     } else if (dealerValue < playerValue) {
         $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
+        $("#cash").text("$" + playerBalance);
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -301,6 +303,7 @@ const hitDealer = (hand) => {
     } else if (dealerValue = playerValue){
         $("#headline").text("PUSH! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
+        $("#cash").text("$" + playerBalance);
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
