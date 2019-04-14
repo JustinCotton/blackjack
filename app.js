@@ -315,7 +315,7 @@ const dealerCantHit = () => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (getHandValue(dealerHand) = getHandValue(playerHand)){
+    } else if (getHandValue(dealerHand) == getHandValue(playerHand)){
         // revealDealerDownCard();
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
