@@ -232,48 +232,30 @@ const getHandValue = (hand) => {
 
 const checkForPlayerBlackjack = (sum) => {
     if (sum == 21 && !checkForDealerBlackjack(getHandValue(dealerHand))) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand));        
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand));        
         $("#headline").text("Blackjack!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
         $("#cash").text("$" + playerBalance);
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } else if (sum == 21 && checkForDealerBlackjack(getHandValue(dealerHand))) {
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } return;
 };
 
 const checkForDealerBlackjack = (sum) => {
     if (sum == 21) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand));    
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand));    
         $("#headline").text("Dealer Has Blackjack! Player Loses!").css("background", "red");
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } return;
 };
 
@@ -281,10 +263,6 @@ const checkForPlayerBust = (sum) => {
     if (sum > 21) {
         $("headline").text("Bust! Player Loses!").css("background", "red");
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
         return true;
     }
 };
@@ -297,47 +275,30 @@ const dealerMustHit = () => {
 
 const dealerCantHit = () => {
     if (getHandValue(dealerHand) > getHandValue(playerHand)) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand)); 
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } else if (getHandValue(dealerHand) < getHandValue(playerHand)) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand));
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand));
         $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } else if (getHandValue(dealerHand) == getHandValue(playerHand)){
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand)); 
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
     }
 }
 
@@ -351,38 +312,26 @@ const hitDealer = (hand) => {
     let cardFace = "url(" + dealerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     if (dealerValue > 21) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand)); 
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } else if (dealerValue > playerValue) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand)); 
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     } else if (dealerValue < playerValue) {
-        // revealDealerDownCard();
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand));
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand));
         $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
@@ -393,19 +342,14 @@ const hitDealer = (hand) => {
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
     } else if (dealerValue = playerValue){
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        // revealDealerDownCard();
-        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
-        $("#dealerScore").text(getHandValue(dealerHand)); 
+        revealDealerDownCard();
+        // let cardFace = "url(" + dealerHand[0].face + ")";        
+        // $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        // $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#doubleDown").hide();
-        // $("#surrender").hide();
     }
 };
 
@@ -423,11 +367,6 @@ const hitPlayer = (hand) => {
     if (value > 21) {
         $("#headline").text("Bust! Player Loses").css("background", "red");
         resetGame();
-        // $("#deal").show();
-        // $("#hit").hide();
-        // $("#stand").hide();
-        // $("#surrender").hide();
-        // $("#bet").prop('disabled', false);
     }
 };
 
