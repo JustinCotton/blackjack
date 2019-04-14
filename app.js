@@ -338,7 +338,7 @@ const dealerTurn = () => {
         }
     }
     while (getHandValue(dealerHand) >= 17 && getHandValue(dealerHand) < 21) {
-        if (getHandValue(dealerHand) > playerValue) {
+        if (getHandValue(dealerHand) > getHandValue(playerHand)) {
             $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
             // resetGame();
             $("#deal").show();
