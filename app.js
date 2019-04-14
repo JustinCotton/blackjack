@@ -282,7 +282,7 @@ const checkForPlayerBust = (sum) => {
 
 const dealerTurn = () => {
     if (getHandValue(dealerHand) < 17) {
-        for (let i = 0; i < 6; i++) {
+        while (getHandValue(dealerHand) < 17) {
             hitDealer(dealerHand);
         }
     } else if (dealerValue > 21) {
