@@ -329,6 +329,9 @@ const hitDealer = (hand) => {
     let cardFace = "url(" + dealerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     if (dealerValue > 21) {
+        let cardFace = "url(" + dealerHand[0].face + ")";
+        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
