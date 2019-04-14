@@ -158,7 +158,7 @@ const getBetAmountFromPlayer = () => {
         alert("Insufficient Funds!");
         // $("#headline").text("Insufficient Funds!").css("background", "red");
         $("#bet").val("100");
-        resetGame();
+        // resetGame();
     } else {
         playerBalance = playerBalance - currentBet;
         $("#cash").text("$" + playerBalance);
