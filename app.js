@@ -210,7 +210,7 @@ const dealCards = () => {
     }
     $("#dealerCard0").css({"background": cardBack, "background-size": "contain"});
     $("#playerScore").text(getHandValue(playerHand));
-    $("#dealerScore").text(dealerHand[1] + " + ?");
+    $("#dealerScore").text(dealerHand[1].value + " + ?");
     checkForPlayerBlackjack(getHandValue(playerHand));
     checkForDealerBlackjack(getHandValue(dealerHand));
 };
