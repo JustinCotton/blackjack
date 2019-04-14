@@ -338,7 +338,7 @@ const dealerTurn = () => {
         }
     }
     while (getHandValue(dealerHand) >= 17 && getHandValue(dealerHand) < 21) {
-        if (dealerValue > playerValue) {
+        if (getHandValue(dealerHand) > playerValue) {
             $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
             // resetGame();
             $("#deal").show();
@@ -347,7 +347,7 @@ const dealerTurn = () => {
             $("#doubleDown").hide();
             $("#surrender").hide();
             $("#bet").prop('disabled', false);
-        } else if (dealerValue < playerValue) {
+        } else if (getHandValue(dealerHand) < getHandValue(playerHand)) {
             $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
             playerBalance += (2 * currentBet);
             $("#cash").text("$" + playerBalance);
@@ -358,7 +358,7 @@ const dealerTurn = () => {
             $("#doubleDown").hide();
             $("#surrender").hide();
             $("#bet").prop('disabled', false);
-        } else if (dealerValue = playerValue){
+        } else if (getHandValue(dealerHand) = getHandValue(playerHand)){
             $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
             playerBalance += currentBet;
             $("#cash").text("$" + playerBalance);
@@ -368,7 +368,7 @@ const dealerTurn = () => {
             $("#stand").hide();
             $("#doubleDown").hide();
             $("#surrender").hide();
-        } else if (dealerValue > 21) {
+        } else if (getHandValue(dealerHand) > 21) {
             break;
         }
     }
