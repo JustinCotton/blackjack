@@ -243,6 +243,7 @@ const checkForPlayerBlackjack = (sum) => {
         $("#stand").hide();
         $("#doubleDown").hide();
         $("#surrender").hide();
+        $("#bet").prop('disabled', false);
     } else if (sum == 21 && checkForDealerBlackjack(getHandValue(dealerHand))) {
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
@@ -253,6 +254,7 @@ const checkForPlayerBlackjack = (sum) => {
         $("#stand").hide();
         $("#doubleDown").hide();
         $("#surrender").hide();
+        $("#bet").prop('disabled', false);
     } return;
 };
 
@@ -269,6 +271,7 @@ const checkForDealerBlackjack = (sum) => {
         $("#stand").hide();
         $("#doubleDown").hide();
         $("#surrender").hide();
+        $("#bet").prop('disabled', false);
     } return;
 };
 
