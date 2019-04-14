@@ -281,11 +281,7 @@ const checkForPlayerBust = (sum) => {
 };
 
 const dealerTurn = () => {
-    if (getHandValue(dealerHand) < 17) {
-        while (getHandValue(dealerHand) < 17) {
-            hitDealer(dealerHand);
-        }
-    } else if (dealerValue > 21) {
+    if (dealerValue > 21) {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
@@ -327,6 +323,10 @@ const dealerTurn = () => {
             $("#stand").hide();
             $("#doubleDown").hide();
             $("#surrender").hide();
+        } else if (getHandValue(dealerHand) < 17) {
+            while (getHandValue(dealerHand) < 17) {
+                hitDealer(dealerHand);
+            }
         }
     }
 };
