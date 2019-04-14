@@ -287,7 +287,7 @@ const dealerMustHit = () => {
 };
 
 const dealerCantHit = () => {
-    if (dealerValue > playerValue) {
+    if (getHandValue(dealerHand) > getHandValue(playerHand)) {
         $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
         // resetGame();
         $("#deal").show();
@@ -296,7 +296,7 @@ const dealerCantHit = () => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (dealerValue < playerValue) {
+    } else if (getHandValue(dealerHand) < getHandValue(playerHand)) {
         $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
@@ -307,7 +307,7 @@ const dealerCantHit = () => {
         $("#doubleDown").hide();
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
-    } else if (dealerValue = playerValue){
+    } else if (getHandValue(dealerHand) = getHandValue(playerHand)){
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
