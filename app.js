@@ -227,6 +227,7 @@ const checkForPlayerBlackjack = (sum) => {
     if (sum == 21 && !checkForDealerBlackjack(getHandValue(dealerHand))) {
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        $("#dealerScore").text(getHandValue(dealerHand));        
         $("#headline").text("Blackjack!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
         $("#cash").text("$" + playerBalance);
