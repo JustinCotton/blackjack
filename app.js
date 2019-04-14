@@ -323,10 +323,11 @@ const dealerTurn = () => {
             $("#stand").hide();
             $("#doubleDown").hide();
             $("#surrender").hide();
+        } else if (getHandValue(dealerHand) < 17) {
+            while (getHandValue(dealerHand) < 17) {
+                hitDealer(dealerHand);
+            }
         }
-    }
-    while (getHandValue(dealerHand) < 17) {
-        hitDealer(dealerHand);
     }
 };
 
