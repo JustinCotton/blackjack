@@ -333,6 +333,10 @@ const checkForPlayerBust = (sum) => {
 const dealerTurn = () => {
     while (getHandValue(dealerHand) < 17) {
         hitDealer(dealerHand);
+        if (getHandValue(dealerHand) >= 17 && getHandValue(dealerHand) < 21) {
+            break;
+        }
+    }
     while (getHandValue(dealerHand) >= 17 && getHandValue(dealerHand) < 21) {
         if (dealerValue > playerValue) {
             $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
@@ -364,7 +368,9 @@ const dealerTurn = () => {
             $("#stand").hide();
             $("#doubleDown").hide();
             $("#surrender").hide();
-        }  
+        } else if (dealerValue > 21) {
+            break;
+        }
     }
     if (dealerValue > 21) {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
