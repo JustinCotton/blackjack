@@ -219,13 +219,14 @@ const getHandValue = (hand) => {
     let sum = 0;
     for (let i = 0; i < hand.length; i++) {
         sum += hand[i].value;
+        // check for whether a busting hand (array of objects) has an Ace; if so, change "value" of Ace to 1
     }
     return sum;
 };
 
 const checkForPlayerBlackjack = (sum) => {
     if (sum == 21 && !checkForDealerBlackjack(getHandValue(dealerHand))) {
-        // revealDealerCard();
+        // revealDealerDownCard();
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand));        
@@ -253,7 +254,7 @@ const checkForPlayerBlackjack = (sum) => {
 
 const checkForDealerBlackjack = (sum) => {
     if (sum == 21) {
-        // revealDealerCard();
+        // revealDealerDownCard();
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand));    
@@ -339,7 +340,7 @@ const hitDealer = (hand) => {
     let cardFace = "url(" + dealerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     if (dealerValue > 21) {
-        // revealDealerCard();
+        // revealDealerDownCard();
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand)); 
@@ -354,7 +355,7 @@ const hitDealer = (hand) => {
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
     } else if (dealerValue > playerValue) {
-        // revealDealerCard();
+        // revealDealerDownCard();
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand)); 
@@ -367,7 +368,7 @@ const hitDealer = (hand) => {
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
     } else if (dealerValue < playerValue) {
-        // revealDealerCard();
+        // revealDealerDownCard();
         let cardFace = "url(" + dealerHand[0].face + ")";
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand));
@@ -382,12 +383,13 @@ const hitDealer = (hand) => {
         $("#bet").prop('disabled', false);
     } else if (dealerValue = playerValue){
         let cardFace = "url(" + dealerHand[0].face + ")";
-        // revealDealerCard();
+        // revealDealerDownCard();
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -416,6 +418,22 @@ const hitPlayer = (hand) => {
         $("#surrender").hide();
         $("#bet").prop('disabled', false);
     }
+};
+
+const resetGame = () => {
+    $("#deal").show();
+    $("#hit").hide();
+    $("#stand").hide();
+    $("#doubleDown").hide();
+    $("#surrender").hide();
+    $("#bet").prop('disabled', false);
+    return;
+};
+
+const revealDealerDownCard = () => {
+    $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+    $("#dealerScore").text(getHandValue(dealerHand));
+    return;
 };
 
 const doubleDown = (bet) => {
