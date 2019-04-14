@@ -322,6 +322,8 @@ const dealerTurn = () => {
 };
 
 const hitDealer = (hand) => {
+    let cardFace = "url(" + dealerHand[0].face + ")";
+    $(thisCard).css({"background": cardFace, "background-size": "contain"});
     let cardSlot = hand.length;
     dealerHand.push(shuffle());
     let dealerValue = getHandValue(dealerHand);
