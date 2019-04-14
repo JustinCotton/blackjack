@@ -187,8 +187,8 @@ const dealCards = () => {
     $("#deal").hide();
     $("#hit").show();
     $("#stand").show();
-    // $("#surrender").show();
-    // $("#doubleDown").show();
+    $("#surrender").show();
+    $("#doubleDown").show();
     $("#dealerCard2").hide();
     $("#dealerCard3").hide();
     $("#dealerCard4").hide();
@@ -225,8 +225,6 @@ const getHandValue = (hand) => {
 
 const checkForPlayerBlackjack = (sum) => {
     if (sum == 21 && !checkForDealerBlackjack(getHandValue(dealerHand))) {
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $(thisCard).css({"background": cardFace, "background-size": "contain"});
         $("#headline").text("Blackjack!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
         $("#cash").text("$" + playerBalance);
@@ -236,8 +234,6 @@ const checkForPlayerBlackjack = (sum) => {
         $("#doubleDown").hide();
         $("#surrender").hide();
     } else if (sum == 21 && checkForDealerBlackjack(getHandValue(dealerHand))) {
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $(thisCard).css({"background": cardFace, "background-size": "contain"});
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
@@ -251,8 +247,6 @@ const checkForPlayerBlackjack = (sum) => {
 
 const checkForDealerBlackjack = (sum) => {
     if (sum == 21) {
-        let cardFace = "url(" + dealerHand[0].face + ")";
-        $(thisCard).css({"background": cardFace, "background-size": "contain"});
         $("#headline").text("Dealer Has Blackjack! Player Loses!").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
@@ -274,8 +268,6 @@ const checkForPlayerBust = (sum) => {
 };
 
 const dealerTurn = () => {
-    let cardFace = "url(" + dealerHand[0].face + ")";
-    $(thisCard).css({"background": cardFace, "background-size": "contain"});
     while (getHandValue(dealerHand) < 17) {
         hitDealer(dealerHand);
     }
@@ -322,8 +314,6 @@ const dealerTurn = () => {
 };
 
 const hitDealer = (hand) => {
-    let cardFace = "url(" + dealerHand[0].face + ")";
-    $(thisCard).css({"background": cardFace, "background-size": "contain"});
     let cardSlot = hand.length;
     dealerHand.push(shuffle());
     let dealerValue = getHandValue(dealerHand);
