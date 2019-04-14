@@ -485,11 +485,11 @@ $(function() {
     // Listen for click events on "Stand" button
     $("#stand").click(function (event) {
         event.preventDefault();
-        if (getHandValue(dealerHand) > 16 && getHandValue(dealerHand) < 21) {    
-            dealerCantHit();
-        } else if (getHandValue(dealerHand) < 17) {
+        if (getHandValue(dealerHand) < 17) {
             dealerMustHit();
-        }
+        // } else if (getHandValue(dealerHand) > 16 && getHandValue(dealerHand) < 21) {
+        //     dealerCantHit();
+        // }
     });
 
     // Listen for click events on "Double Down" button
