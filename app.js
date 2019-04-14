@@ -458,30 +458,24 @@ $(function() {
     });
 
     $(".deck1").click(function () {
-        // cardBack = "url('./deck3.jpg')"
-        $("#dealerCard0").addClass("deck1")
-        $("#dealerCard0").removeClass("deck2")
-        $("#dealerCard0").removeClass("deck3")
-        $(".deck1").addClass("selected")
-        $(".deck2").removeClass("selected")
-        $(".deck3").removeClass("selected")
+        // cardBack = "url('./deck1.jpg')"
+        $("#dealerCard0").css({"background": "url('./deck1.jpg')", "background-size": "contain"});
+        $(".deck1").addClass("selected");
+        $(".deck2").removeClass("selected");
+        $(".deck3").removeClass("selected");
     });
 
     $(".deck2").click(function () {
-        // cardBack = "url('./deck3.jpg')"
-        $("#dealerCard0").removeClass("deck1")
-        $("#dealerCard0").addClass("deck2")
-        $("#dealerCard0").removeClass("deck3")
-        $(".deck1").removeClass("selected")
-        $(".deck2").addClass("selected")
-        $(".deck3").removeClass("selected")
+        // cardBack = "url('./deck2.jpg')";
+        $("#dealerCard0").css({"background": "url('./deck2.jpg')", "background-size": "contain"});
+        $(".deck1").removeClass("selected");
+        $(".deck2").addClass("selected");
+        $(".deck3").removeClass("selected");
     });
 
     $(".deck3").click(function () {
         // cardBack = "url('./deck3.jpg')"
-        $("#dealerCard0").removeClass("deck1")
-        $("#dealerCard0").removeClass("deck2")
-        $("#dealerCard0").addClass("deck3")
+        $("#dealerCard0").css({"background": "url('./deck3.jpg')", "background-size": "contain"});
         $(".deck1").removeClass("selected")
         $(".deck2").removeClass("selected")
         $(".deck3").addClass("selected")
