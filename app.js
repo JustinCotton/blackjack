@@ -250,6 +250,9 @@ const checkForPlayerBlackjack = (sum) => {
 
 const checkForDealerBlackjack = (sum) => {
     if (sum == 21) {
+        let cardFace = "url(" + dealerHand[0].face + ")";
+        $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
+        $("#dealerScore").text(getHandValue(dealerHand));    
         $("#headline").text("Dealer Has Blackjack! Player Loses!").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
