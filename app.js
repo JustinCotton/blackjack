@@ -258,7 +258,7 @@ const checkForDealerBlackjack = (sum) => {
 
 const checkForPlayerBust = (sum) => {
     if (sum > 21) {
-        $("headline").text("BUST! Player Loses!").css("background", "red");
+        $("headline").text("Bust! Player Loses!").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -374,7 +374,7 @@ const hitPlayer = (hand) => {
     let cardFace = "url(" + playerHand[cardSlot].face + ")";
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     if (value > 21) {
-        $("#headline").text("BUST! Player Loses").css("background", "red");
+        $("#headline").text("Bust! Player Loses").css("background", "red");
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
