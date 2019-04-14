@@ -283,6 +283,9 @@ const checkForPlayerBust = (sum) => {
 const dealerTurn = () => {
     while (getHandValue(dealerHand) < 17) {
         hitDealer(dealerHand);
+        if (dealerHand > 17) {
+            break;
+        }
     }
     if (dealerValue > 21) {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
