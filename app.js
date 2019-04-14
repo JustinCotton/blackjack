@@ -524,7 +524,7 @@ $(function() {
     // Listen for click events on "Stand" button
     $("#stand").click(function (event) {
         event.preventDefault();
-        if (16 < getHandValue(dealerHand) < 21) {    
+        if (getHandValue(dealerHand) > 16 && getHandValue(dealerHand) < 21) {    
             dealerCantHit();
         } else if (getHandValue(dealerHand) < 17) {
             dealerMustHit();
