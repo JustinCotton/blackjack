@@ -208,9 +208,9 @@ const dealCards = () => {
         let cardFace = "url(" + dealerHand[j].face + ")";
         $(thisCard).css({"background": cardFace, "background-size": "contain"});
     }
-    $("dealerCard0").css({"background": cardBack, "background-size": "contain"});
+    $("#dealerCard0").css({"background": cardBack, "background-size": "contain"});
     $("#playerScore").text(getHandValue(playerHand));
-    $("#dealerScore").text(getHandValue(dealerHand));
+    $("#dealerScore").text(dealerHand[1] + " + ?");
     checkForPlayerBlackjack(getHandValue(playerHand));
     checkForDealerBlackjack(getHandValue(dealerHand));
 };
