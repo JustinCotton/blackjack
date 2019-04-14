@@ -217,11 +217,12 @@ const dealCards = () => {
 
 const getHandValue = (hand) => {
     let sum = 0;
-    for (let i = 0; i < hand.length; i++) {
-        sum += hand[i].value;
+    let handCopy = hand;
+    for (let i = 0; i < handCopy.length; i++) {
+        sum += handCopy[i].value;
     }
-    while (sum > 21 && (hand.findIndex(x => x.value === 11) != -1)) {
-        hand[hand.findIndex(x => x.value === 11)].value = 1;
+    while (sum > 21 && (handCopy.findIndex(x => x.value === 11) != -1)) {
+        handCopy[handCopy.findIndex(x => x.value === 11)].value = 1;
         sum -= 10;
     }
     // check for whether a busting hand (array of objects) has an Ace; if so, change "value" of Ace to 1
