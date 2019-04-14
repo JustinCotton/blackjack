@@ -232,6 +232,7 @@ const checkForPlayerBlackjack = (sum) => {
         $("#headline").text("Blackjack!! Player Wins $" + (2.5 * currentBet) + "!").css("background", "red");
         playerBalance += (2.5 * currentBet);
         $("#cash").text("$" + playerBalance);
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -241,6 +242,7 @@ const checkForPlayerBlackjack = (sum) => {
         $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
         playerBalance += currentBet;
         $("#cash").text("$" + playerBalance);
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -256,6 +258,7 @@ const checkForDealerBlackjack = (sum) => {
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand));    
         $("#headline").text("Dealer Has Blackjack! Player Loses!").css("background", "red");
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -267,6 +270,7 @@ const checkForDealerBlackjack = (sum) => {
 const checkForPlayerBust = (sum) => {
     if (sum > 21) {
         $("headline").text("Bust! Player Loses!").css("background", "red");
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -283,6 +287,7 @@ const dealerTurn = () => {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -292,6 +297,7 @@ const dealerTurn = () => {
     } else if (16 < dealerValue < 21) {    
         if (dealerValue > playerValue) {
             $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
+            // resetGame();
             $("#deal").show();
             $("#hit").hide();
             $("#stand").hide();
@@ -302,6 +308,7 @@ const dealerTurn = () => {
             $("#headline").text("You Win $" + (2 * currentBet) + "!").css("background", "red");
             playerBalance += (2 * currentBet);
             $("#cash").text("$" + playerBalance);
+            // resetGame();
             $("#deal").show();
             $("#hit").hide();
             $("#stand").hide();
@@ -312,6 +319,7 @@ const dealerTurn = () => {
             $("#headline").text("Push! Player's $" + currentBet + " Bet Refunded!").css("background", "red");
             playerBalance += currentBet;
             $("#cash").text("$" + playerBalance);
+            // resetGame();
             $("#deal").show();
             $("#hit").hide();
             $("#stand").hide();
@@ -338,6 +346,7 @@ const hitDealer = (hand) => {
         $("#headline").text("Dealer Busts! Player Wins $" + (2 * currentBet) + "!").css("background", "red");
         playerBalance += (2 * currentBet);
         $("#cash").text("$" + playerBalance);
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -350,6 +359,7 @@ const hitDealer = (hand) => {
         $("#dealerCard0").css({"background": cardFace, "background-size": "contain"});
         $("#dealerScore").text(getHandValue(dealerHand)); 
         $("#headline").text("Sorry! Dealer Wins!").css("background", "red");
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
@@ -399,6 +409,7 @@ const hitPlayer = (hand) => {
     $(newCard).css({"background": cardFace, "background-size": "contain"}).show();
     if (value > 21) {
         $("#headline").text("Bust! Player Loses").css("background", "red");
+        // resetGame();
         $("#deal").show();
         $("#hit").hide();
         $("#stand").hide();
