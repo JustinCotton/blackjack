@@ -467,7 +467,7 @@ $(function() {
 
     $(".deck2").click(function () {
         // cardBack = "url('./deck2.jpg')";
-        $("#dealerCard0").css({"background": "url('./deck2.jpg')", "background-size": "contain"});
+        $("#dealerCard0").css({"background": "url('./deck2.jpg')", "background-size": "cover"});
         $(".deck1").removeClass("selected");
         $(".deck2").addClass("selected");
         $(".deck3").removeClass("selected");
@@ -475,7 +475,7 @@ $(function() {
 
     $(".deck3").click(function () {
         // cardBack = "url('./deck3.jpg')"
-        $("#dealerCard0").css({"background": "url('./deck3.jpg')", "background-size": "contain"});
+        $("#dealerCard0").css({"background": "url('./deck3.jpg')", "background-size": "cover"});
         $(".deck1").removeClass("selected")
         $(".deck2").removeClass("selected")
         $(".deck3").addClass("selected")
