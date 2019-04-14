@@ -219,8 +219,12 @@ const getHandValue = (hand) => {
     let sum = 0;
     for (let i = 0; i < hand.length; i++) {
         sum += hand[i].value;
-        // check for whether a busting hand (array of objects) has an Ace; if so, change "value" of Ace to 1
     }
+    while (sum > 21 && (hand.findIndex(x => x.value === 11) != -1)) {
+        hand[hand.findIndex(x => x.value === 11)].value = 1;
+        sum -= 10;
+    }
+    // check for whether a busting hand (array of objects) has an Ace; if so, change "value" of Ace to 1
     return sum;
 };
 
