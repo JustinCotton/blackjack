@@ -378,6 +378,7 @@ const dealerTurn = () => {
         };
     } while (getHandValue(dealerHand) < 17) {
     hitDealer(dealerHand);
+    }
 };
 
 const hitDealer = (hand) => {
