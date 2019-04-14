@@ -155,8 +155,8 @@ let deckOfCards = [
 const getBetAmountFromPlayer = () => {
     currentBet = parseInt($("#bet").val())
     if (currentBet > playerBalance) {
-        alert("Insufficient Funds!");
-        // $("#headline").text("Insufficient Funds!").css("background", "red");
+        // alert("Insufficient Funds!");
+        $("#headline").text("Insufficient Funds!").css("background", "red");
         $("#bet").val("100");
         resetGame();
     } else {
