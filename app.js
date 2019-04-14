@@ -187,8 +187,8 @@ const dealCards = () => {
     $("#deal").hide();
     $("#hit").show();
     $("#stand").show();
-    $("#surrender").show();
-    $("#doubleDown").show();
+    // $("#surrender").show();
+    // $("#doubleDown").show();
     $("#dealerCard2").hide();
     $("#dealerCard3").hide();
     $("#dealerCard4").hide();
