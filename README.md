@@ -18,7 +18,7 @@
 
   * Deal, Hit, and Stand buttons
   * Wagering
-  * Shuffled (randomized deck)
+  * Shuffled (randomized) deck
   * Modeled on real-world Blackjack rules and gameflow
 
 
@@ -39,15 +39,15 @@
 
 ## Losing Conditions
 
-   * Dealer is dealt a "natural" blackjack, and Player is not dealt a natural blackjack (Player loses their bet, OR
+   * Dealer is dealt a "natural" blackjack, and Player is not dealt a natural blackjack (Player loses her bet), OR
    
-   * Player busts (Player loses their bet, OR  
+   * Dealer's hand outranks Player's hand (Player loses her bet), OR  
    
-   * Dealer's hand outranks Player's hand (Player loses their bet)
+   * Player busts (Player loses her bet)
 
 ## Tying/"Pushing" Conditions
 
-   * Player and Dealer have equal, un-busting hands (Player's bet is returned)
+   * Player and Dealer have equal, un-busting hands, including Blackjacks (Player's bet is returned)
 
 ## Future Development
 
