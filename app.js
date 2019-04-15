@@ -97,6 +97,7 @@ let insuranceBet = 0;
 let dealerHand = [];
 let playerHand = [];
 let cardBack = "url('./deck1.jpg')"
+// will refactor the hard-coding of the 52-card deck later with loops and object pushes to the array
 let deckOfCards = [
     {name: "2 of Hearts", value: 2, face: "./2Hearts.png"},
     {name: "3 of Hearts", value: 3, face: "./3Hearts.png"},
