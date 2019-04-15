@@ -55,4 +55,6 @@
   * Add betting chips to UI instead of inputting dollar amounts
   * Make application responsive
   * Add multiplayer functionality
+  * Music, card flip and deal sound effects
+  * Card and win/lose/push/blackjack notice animations
   
