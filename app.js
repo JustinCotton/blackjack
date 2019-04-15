@@ -163,7 +163,7 @@ const getBetAmountFromPlayer = () => {
     } else {
         playerBalance = playerBalance - currentBet;
         $("#cash").text("$" + playerBalance);
-        return currentBet;
+        dealCards();
     }
 };
 
@@ -421,7 +421,7 @@ $(function() {
     // Listen for click events on "Deal" button
     $("#deal").click(function (event) {
         event.preventDefault();
-        dealCards(getBetAmountFromPlayer());
+        getBetAmountFromPlayer();
     });
 
     // Listen for click events on "Hit" button
