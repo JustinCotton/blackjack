@@ -1,4 +1,4 @@
-# Blackjack Card Game Project
+# Blackjack Card Game
 ## Overview
 
 
