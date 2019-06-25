@@ -1,7 +1,9 @@
 # Blackjack Card Game
 ## Overview
 
+Blackjack card game created with HTML, CSS, JS, and jQuery.
 
+![Screenshot](https://github.com/JustinCotton/blackjack/blob/master/BlackjackScreenshot.JPG)
 
 **Live site:** <https://justincotton.github.io/blackjack/>
 
