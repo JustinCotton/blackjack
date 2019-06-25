@@ -7,13 +7,14 @@ Blackjack card game created with HTML, CSS, JS, and jQuery.
 
 **Live site:** <https://justincotton.github.io/blackjack/>
 
+**Project Planning:** [Trello](https://trello.com/b/51TjK5Yf/sei21-blackjack)
+
 ## Technologies Used
 
   * Languages: HTML5, CSS3, Javascript, jQuery
   * Design: Google Fonts
-  * Project Planning & User Stories: [Trello](https://trello.com/b/51TjK5Yf/sei21)
   * Visual Studio Code
-  * Git, Github, Github Pages
+  * Git, GitHub, GitHub Pages
 
 
 ## Features
