@@ -12,7 +12,7 @@ Blackjack card game created with HTML, CSS, JS, and jQuery.
 ## Technologies Used
 
   * Language: JavaScript
-  * Front-End Tools: HTML, CSS, jQuery  * 
+  * Front-End Tools: HTML, CSS, jQuery 
   * Version Control: Git, GitHub
   * Web Hosting: GitHub Pages
   * Text Editor: Visual Studio Code
