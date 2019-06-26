@@ -12,17 +12,17 @@ Blackjack card game created with HTML, CSS, JS, and jQuery.
 ## Technologies Used
 
   * Language: JavaScript
-  * Tools: HTML, CSS, jQuery
-  * Design: Google Fonts, OpenGameArt.org
-  * Text Editor: Visual Studio Code
+  * Front-End Tools: HTML, CSS, jQuery  * 
   * Version Control: Git, GitHub
   * Web Hosting: GitHub Pages
+  * Text Editor: Visual Studio Code
+  * Design: Google Fonts, OpenGameArt.org
 
 
 ## Features
 
   * Deal, Hit, and Stand buttons
-  * Wagering
+  * Wagering and payouts
   * Shuffled (randomized) deck
   * Modeled on real-world Blackjack rules and gameflow
 
