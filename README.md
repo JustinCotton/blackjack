@@ -34,18 +34,14 @@ Blackjack card game created with HTML, CSS, JS, and jQuery.
 ## Winning Conditions
 
    * Player is dealt a "natural" blackjack, AND
-   Dealer is not dealt a natural blackjack (Player's bet is paid out at 3:2), OR
-   
-   * Player doesn't bust (hand value < 21), AND Player's hand outranks Dealer's hand (Player's bet is paid out at 1:1), OR  
-   
+   Dealer is not dealt a natural blackjack (Player's bet is paid out at 3:2), OR   
+   * Player doesn't bust (hand value < 21), AND Player's hand outranks Dealer's hand (Player's bet is paid out at 1:1), OR   
    * Dealer busts (Player's bet is paid out at 1:1)
 
 ## Losing Conditions
 
-   * Dealer is dealt a "natural" blackjack, and Player is not dealt a natural blackjack (Player loses her bet), OR
-   
-   * Dealer's hand outranks Player's hand (Player loses her bet), OR  
-   
+   * Dealer is dealt a "natural" blackjack, and Player is not dealt a natural blackjack (Player loses her bet), OR   
+   * Dealer's hand outranks Player's hand (Player loses her bet), OR   
    * Player busts (Player loses her bet)
 
 ## Tying/"Pushing" Conditions
