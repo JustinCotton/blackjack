@@ -11,10 +11,12 @@ Blackjack card game created with HTML, CSS, JS, and jQuery.
 
 ## Technologies Used
 
-  * Languages: HTML5, CSS3, Javascript, jQuery
-  * Design: Google Fonts
-  * Visual Studio Code
-  * Git, GitHub, GitHub Pages
+  * Language: JavaScript
+  * Tools: HTML, CSS, jQuery
+  * Design: Google Fonts, OpenGameArt.org
+  * Text Editor: Visual Studio Code
+  * Version Control: Git, GitHub
+  * Web Hosting: GitHub Pages
 
 
 ## Features
@@ -54,6 +56,6 @@ Blackjack card game created with HTML, CSS, JS, and jQuery.
   * Add betting chips to UI instead of inputting dollar amounts
   * Make application responsive
   * Add multiplayer functionality
-  * Music, card flip and deal sound effects
+  * Music, card flip, and deal sound effects
   * Card and win/lose/push/blackjack notice animations
   
