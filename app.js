@@ -1,5 +1,5 @@
 // 1. Press "Play" button to shuffle (randomize) 52 cards
-// deck of cards could be an array of objects, which each card being an object with keys related to suit, value, and image, and a card would be selected to be dealt by selecting a random number, that would represent the index of an object (card) in the array (deck)
+// deck of cards could be an array of objects, with each card being an object with keys related to suit, value, and image, and a card would be selected to be dealt by selecting a random number that would represent the key of an object (card) in the array (deck)
 
 // 2. Player makes a wager (by input field or pressing buttons representing pre-determined values) [event listeners]
 //   a) check whether value of wager exceeds Player's available money
@@ -11,11 +11,11 @@
 //   b) deal 1st card, face-up, to Dealer
 //   c) deal 2nd card, face-up, to Player
 //   d) deal 2nd card, face-down, to Dealer
-//      i) each hand represented by card values in an array, which will be added later to calculate hand values
+//      i) each hand represented by card values is an array, which will be added later to calculate hand values
 //     ii) card values:
 //          A) number cards: pip value (2, 3, 4, 5, 6, 7, 8, or 9)
-//          B) face card: 10
-//          C) aces: 1 or 11
+//          B) face cards: 10
+//          C) aces: 1 or 11, automatically 1 if 11 would bust hand
 
 // 3x. check for insurance (probably no time for this)
 //   a) if Dealer's face-up card value is 10 or an Ace, then enable Insurance button, which when clicked adds an additional bet equal to half of Player's original bet (which will pay 2-to-1 if Dealer has blackjack)
@@ -41,15 +41,15 @@
 //         B) if Player's new hand value equals 21, Player automatically Stands (move to Dealer's turn [call function])
 //         C) if Player doesn't bust, Player has option to Stand or Hit again (loop to Step 5 [for loop: while hand value < 21])
 
-//   c) Split (future feature where hand is split into two hands if initial dealt cards are the same rank (card value, even if different face cards, since both are valued at 10), and Player bets an amount equal to the initial bet for the new hand; each hand is dealt an additional face-up card, and played separately starting at Step 5)
+//   c) Split (future feature where hand is split into two hands if initial dealt cards are the same rank (card value, even if different face cards, since both are valued at 10), and Player bets an amount equal to the initial bet for the new hand; each new hand is dealt an additional face-up card, and played separately starting at Step 5)
 
 //   d) Double Down (only available after initial deal: disable button afterwards)
-//      i) Player bets an amount equal to initial bet (that Player will win the hand with the next drawn card)
+//      i) Player bets an amount equal to initial bet (betting that Player will win the hand with the next drawn card)
 //     ii) Player is dealt an additional face-up card
 //    iii) Player automatically Stands (move to Dealer's turn [call function])
 
 //   e) Surrender (only available as Player's first option after deal: disabale button afterwards)
-//      i) Player withdraws (Half of Player's bet is returned) (Surrender, Game Over)
+//      i) Player withdraws (half of Player's bet is returned) (Surrender, Game Over)
 
 // 6. Dealer's turn [function]
 //   a) Dealer reveals face-down card
@@ -179,6 +179,10 @@ const dealCards = () => {
     insuranceBet = 0;
     dealerHand = [];
     playerHand = [];
+    deckOfCards[deckOfCards.findIndex(x => x.name === "Ace of Hearts")].value = 11;
+    deckOfCards[deckOfCards.findIndex(x => x.name === "Ace of Diamonds")].value = 11;
+    deckOfCards[deckOfCards.findIndex(x => x.name === "Ace of Clubs")].value = 11;
+    deckOfCards[deckOfCards.findIndex(x => x.name === "Ace of Spades")].value = 11;
     $("#headline").text("Blackjack").css("background", "none");
     $("#dealerCard0").css("visibility", "visible");
     $("#dealerCard1").css("visibility", "visible");
